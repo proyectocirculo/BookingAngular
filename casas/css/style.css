@@ -1,0 +1,66 @@
+#principal{
+	margin-top: 5%;
+}
+
+#headingOne,#headingTwo,#headingThree {
+    background-color: #c55e5e;
+}
+
+#fechaReservada{
+	margin-bottom: 2%;
+}
+
+.container{
+	margin-bottom: 2%;
+}
+
+#consulta{
+	margin-top: 3%;
+}
+
+#dias{
+	float: left;
+	width: 20%;
+}
+
+#verFecha{
+	width: 100px;
+	margin-right: 7px;
+    margin-bottom: 10px;
+}
+#reservado{
+	background-color: #258e23;
+}
+
+#sinReserva{
+	
+}
+
+.cartel{
+	display: none;
+}
+
+#mostrar{
+	display: inherit;
+}
+
+#nomostrar{
+	display: none;
+}
+
+#sinReserva{
+	background-color: white;
+}
+
+#conReserva{
+	background-color: #2dd20e;
+}
+
+#Reservado{
+
+	background-color: #bf0000;
+}
+
+.huge{
+	font-size: 90%;
+}
