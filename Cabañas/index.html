@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html ng-app="Proyecto">
+<head>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8">
+
+	<title>Hola Cabanas</title>
+</head>
+
+<body>
+
+    <div class="container">
+    	<div class="row" ng-controller="MainController">
+
+    		<div class="container form-group">
+				  	<h4>Ingrese las fechas de reservas:</h4>
+
+				  	<div class="col-lg-4">
+				  	  <span class="input-group-addon">Fecha de Entrada</span>
+					  <input type="date" class="form-control" ng-model="fechaIni" placeholder="Fecha de Ingreso">
+					</div>
+
+					<div class="col-lg-4">
+					  <span class="input-group-addon">Fecha de Salida</span>
+					  <input type="date" class="form-control" ng-model="fechaSal" placeholder="Fecha de Ingreso">
+					</div>
+
+					<div class="col-lg-6">
+					  <button class="btn btn-primary" ng-click="calcularReservas(fechaIni,fechaSal,cabanas)" id="consulta">Consultar Reservas</button>
+					</div>
+
+			</div>
+
+			<div class="alert alert-success alert-dismissable" id="{{mostrar}}">
+	            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+	            Existen <a class="alert-link">{{cabanasDisponibles}}</a> Disponibles..
+	        </div>
+
+    		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" ng-repeat="cabana in cabanas">
+
+			  <div class="panel panel-default">
+			    
+			    <div class="panel-heading" role="tab" id="headingOne">
+			      <h4 class="panel-title">
+			        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{cabana.id}}" aria-expanded="true" id="{{cabana.cabanaConreserva}}" aria-controls="{{cabana.id}}">
+			          {{cabana.nombre}} -- {{cabana.id}}
+			        </a>
+			      </h4>
+			    </div>
+
+			    <div id="{{cabana.id}}" class="{{primerValor}} container" role="tabpanel" aria-labelledby="headingOne">
+			      <div class="panel-body">
+			      	{{cabana.descripcion}}
+
+			      	<h4>Precio Desde: ${{cabana.precio}}</h4>
+
+			      	<button class="btn btn-primary"> Ver Cabana </button>
+
+			      </div>
+
+				   <button class="btn btn-danger" id="fechaReservada" type="button" data-toggle="collapse" data-target="#{{cabana.precio}}" ng-click="getFechasReservadas(fechaIni, fechaSal, cabana.reservas)" aria-expanded="false" aria-controls="{{cabana.precio}}">
+					  Ver fechas Reservadas
+				  </button>	
+
+				  <!-- -------------------- -->
+				  <!--
+				  <div class="collapse row" id="{{cabana.precio}}" >
+					  <div class="col-lg-6" id="dias" ng-repeat="fecha in fechas">
+		                <div class="col-lg-3 col-md-6">
+		                    <div class="panel panel-primary">
+		                        <div class="panel-heading" id="verFecha">
+		                            <div class="row" id="{{fecha.condicion}}">
+		                                <div class="col-xs-3">
+		                                    <i class="fa fa-comments fa-5x"></i>
+		                                </div>
+		                                <div class="col-xs-12 text-right">
+		                                    <div class="huge">{{fecha.fecha}}</div>
+		                                    <div>{{fecha.condicion}}</div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+	              </div>   -->
+	              <!-- -------------------------- -->
+	              <div class="row">
+		              <div class="collapse col-lg-6" id="{{cabana.precio}}" >
+						  <div class="col-lg-4" id="dias" ng-repeat="fecha in fechas">
+			                <div class="col-lg-3 col-md-6">
+			                    <div class="panel panel-primary">
+			                        <div class="panel-heading" id="verFecha">
+			                            <div class="row" id="{{fecha.condicion}}">
+			                                <div class="col-lg-12 text-left">
+			                                    <div class="huge">{{fecha.fecha}}</div>
+			                                    <div class="huge">Precio: {{fecha.precioTemporada}}</div>
+			                                    <div>{{fecha.condicion}}</div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+		              </div>
+	              </div>
+
+
+			    </div>
+
+			  </div>
+			  
+			  
+			</div>
+
+    	</div>
+    </div>
+
+
+</body>
+
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/ui-bootstrap-tpls-2.1.3.min.js"></script>
+<script src="js/script.js"></script>
+
+</html>
