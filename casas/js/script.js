@@ -12,7 +12,7 @@
             var deferred = $q.defer();
 
             if(cabanas == null){
-                $http.get('http://colinadelmanzano.com.ar/pruebas/todos/json')
+                $http.get('https://proyectocirculo.github.io/BookingAngular/casas/json/casas.json')
                 .then(function(result){
                     deferred.resolve(result);
                 },
@@ -172,7 +172,7 @@
             $scope.mostrar = "nomostrar";
             
             if((fechaInicial == null)&&(fechaFinal == null)){
-                alert("Tenes que ingresar las dos fechas culiado");
+                alert("Debes ingresar las dos fechas culiado");
             }else{
 
                 //obtengo la fecha inicial
