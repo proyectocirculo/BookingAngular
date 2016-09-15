@@ -37,70 +37,93 @@
         $scope.primerValor = "panel-collapse collapse";
         $scope.mostrar = "nomostrar";
 
+        $scope.fechaIni = new Date();
+        $scope.fechaSal = new Date();
+        var milisegundos=parseInt(15*24*60*60*1000);
+        var tiempo = $scope.fechaSal.getTime();
+        $scope.fechaSal.setTime(tiempo+milisegundos);
+
+        var diaMinInicial = ("0"+$scope.fechaIni.getDate()).slice(-2);
+        var mesMinInicial = ("0"+($scope.fechaIni.getMonth()+1)).slice(-2);
+        var anioMinInicial = $scope.fechaIni.getFullYear();
+        $scope.fechaMin = anioMinInicial+"-"+mesMinInicial+"-"+diaMinInicial;
+
+        //--------------------------------------
+        var milisegundos=parseInt(4*24*60*60*1000);
+        var diaSumado = new Date($scope.fechaMin);
+        var tiempo = diaSumado.getTime();
+        diaSumado.setTime(tiempo+milisegundos);
+
+        var diaMinFinal = ("0"+diaSumado.getDate()).slice(-2);
+        var mesMinFinal = ("0"+(diaSumado.getMonth()+1)).slice(-2);
+        var anioMinFinal = diaSumado.getFullYear();
+        $scope.fechaMinMax = anioMinFinal+"-"+mesMinFinal+"-"+diaMinFinal;
+        //--------------------------------------
+
         Cabanas.traerCabanas().then(function(result){
 
             //$scope.cabanas = result.data;
             $scope.cabanas = [{"casa":"El Buho","id":2,"nombre":"El Buho","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales"
                               ,"precio":120,"camas":"1","personas":"8","tamanio":"100m2","img":"2El Buho",
 
-                            "reservas":[{"fecha":"2016-09-13"},
-                                        {"fecha":"2016-09-14"},
-                                        {"fecha":"2016-09-15"},
-                                        {"fecha":"2016-09-16"},
-                                        {"fecha":"2016-09-17"},
-                                        {"fecha":"2016-09-18"},
-                                        {"fecha":"2016-09-19"}],
+                            "reservas":[{"fecha":"2016-09-13","precioTemporada":90},
+                                        {"fecha":"2016-09-14","precioTemporada":90},
+                                        {"fecha":"2016-09-15","precioTemporada":90},
+                                        {"fecha":"2016-09-16","precioTemporada":90},
+                                        {"fecha":"2016-09-17","precioTemporada":100},
+                                        {"fecha":"2016-09-18","precioTemporada":100},
+                                        {"fecha":"2016-09-19","precioTemporada":100}],
 
                                     "servicios":[{"srv":"iconos-_pileta.jpg"},{"srv":"iconos-_auto.jpg"}]},
                               
                               {"casa":"El Gallo","id":104,"nombre":"El Gallo","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales","precio":400,"camas":"4","personas":"7","tamanio":"","img":"104El Gallo",
                                     
-                            "reservas":[{"fecha":"2016-09-17"},
-                                        {"fecha":"2016-09-18"},
-                                        {"fecha":"2016-09-20"},
-                                        {"fecha":"2016-09-22"},
-                                        {"fecha":"2016-09-23"},
-                                        {"fecha":"2016-09-24"},
-                                        {"fecha":"2016-09-29"}],
+                            "reservas":[{"fecha":"2016-09-14","precioTemporada":100},
+                                        {"fecha":"2016-09-16","precioTemporada":100},
+                                        {"fecha":"2016-09-19","precioTemporada":90},
+                                        {"fecha":"2016-09-20","precioTemporada":90},
+                                        {"fecha":"2016-09-21","precioTemporada":100},
+                                        {"fecha":"2016-09-22","precioTemporada":100},
+                                        {"fecha":"2016-09-29","precioTemporada":100}],
 
                                     "servicios":[{"srv":"iconos-_pileta.jpg"}]},
                               
                               {"casa":"La Paloma","id":98,"nombre":"La Paloma","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales","precio":500,"camas":"4","personas":"8","tamanio":"","img":"98La Paloma",
-                                    "reservas":[{"fecha":"2016-09-14"},
-                                                {"fecha":"2016-09-17"},
-                                                {"fecha":"2016-09-19"},
-                                                {"fecha":"2016-09-20"},
-                                                {"fecha":"2016-09-21"},
-                                                {"fecha":"2016-09-22"},
-                                                {"fecha":"2016-09-23"}],
+                                    "reservas":[{"fecha":"2016-09-07","precioTemporada":100},
+                                                {"fecha":"2016-09-15","precioTemporada":100},
+                                                {"fecha":"2016-09-20","precioTemporada":90},
+                                                {"fecha":"2016-09-25","precioTemporada":90},
+                                                {"fecha":"2016-09-26","precioTemporada":100},
+                                                {"fecha":"2016-09-27","precioTemporada":100},
+                                                {"fecha":"2016-09-29","precioTemporada":100}],
                                     "servicios":[{"srv":"iconos-_market.jpg"}]},
                               
                               {"casa":"El Gato","id":99,"nombre":"El Gato","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales","precio":375,"camas":"4","personas":"8","tamanio":"100m2","img":"99El gato",
-                                    "reservas":[{"fecha":"2016-09-01"},
-                                                {"fecha":"2016-09-02"},
-                                                {"fecha":"2016-09-03"},
-                                                {"fecha":"2016-09-04"},
-                                                {"fecha":"2016-09-12"},
-                                                {"fecha":"2016-09-14"},
-                                                {"fecha":"2016-09-23"}],
+                                    "reservas":[{"fecha":"2016-09-14","precioTemporada":100},
+                                                {"fecha":"2016-09-16","precioTemporada":100},
+                                                {"fecha":"2016-09-19","precioTemporada":90},
+                                                {"fecha":"2016-09-20","precioTemporada":90},
+                                                {"fecha":"2016-09-21","precioTemporada":100},
+                                                {"fecha":"2016-09-22","precioTemporada":100},
+                                                {"fecha":"2016-09-29","precioTemporada":100}],
                                     "servicios":[{"srv":"iconos-_wifi.jpg"},{"srv":"iconos-_auto.jpg"},{"srv":"iconos-_grill.jpg"}]},
                               
                               {"casa":"Casa Real","id":106,"nombre":"Casa Real","descripcion":"200m2, 2 cama matrimoniales, 2 camas individuales","precio":760,"camas":"4","personas":"8","tamanio":"200m2","img":"106Casa Real",
                                     
-                                    "reservas":[{"fecha":"2016-09-14"},
-                                                {"fecha":"2016-09-16"},
-                                                {"fecha":"2016-09-17"},
-                                                {"fecha":"2016-09-20"},
-                                                {"fecha":"2016-09-21"},
-                                                {"fecha":"2016-09-22"},
-                                                {"fecha":"2016-09-29"}],
+                                    "reservas":[{"fecha":"2016-09-14","precioTemporada":100},
+                                                {"fecha":"2016-09-16","precioTemporada":100},
+                                                {"fecha":"2016-09-19","precioTemporada":90},
+                                                {"fecha":"2016-09-20","precioTemporada":90},
+                                                {"fecha":"2016-09-21","precioTemporada":100},
+                                                {"fecha":"2016-09-22","precioTemporada":100},
+                                                {"fecha":"2016-09-29","precioTemporada":100}],
 
                                     "servicios":[{"srv":"iconos-_deck.jpg"},{"srv":"iconos-_wifi.jpg"},{"srv":"iconos-_grill.jpg"}]}]
-            $scope.fechaIni = new Date();
-            $scope.fechaSal = new Date(); 
-            var milisegundos=parseInt(15*24*60*60*1000);
-            var tiempo = $scope.fechaSal.getTime();
-            $scope.fechaSal.setTime(tiempo+milisegundos);
+            //$scope.fechaIni = new Date();
+            //$scope.fechaSal = new Date(); 
+            //var milisegundos=parseInt(15*24*60*60*1000);
+            //var tiempo = $scope.fechaSal.getTime();
+            //$scope.fechaSal.setTime(tiempo+milisegundos);
 
             $scope.calcularReservas($scope.fechaIni, $scope.fechaSal,$scope.cabanas);
 
@@ -117,10 +140,17 @@
             var fechasVerificar =[];
 
             for (var i = 0; i < (diasDiferencia+1) ; i++) {
+
+                //-----------------------------------
+                var diaInicialBucle = ("0"+fechaInicial.getDate()).slice(-2);
+                var mesInicialBucle = ("0"+(fechaInicial.getMonth()+1)).slice(-2);
+                var anioInicialBucle = fechaInicial.getFullYear();
+                var fechaPostaBucle = anioInicialBucle+"/"+mesInicialBucle+"/"+diaInicialBucle;
+
+                //------------------------------------
                 
                 var milisegundos=parseInt(i*24*60*60*1000);
-                //var diaSumado = new Date();
-                var diaSumado = fechaInicial;
+                var diaSumado = new Date(fechaPostaBucle);
                 var tiempo = diaSumado.getTime();
                 diaSumado.setTime(tiempo+milisegundos);
 
@@ -129,20 +159,23 @@
                 var anioInicial = diaSumado.getFullYear();
                 var fechaPosta = anioInicial+"-"+mesInicial+"-"+diaInicial;
 
-                var a = {
-                            fecha: fechaPosta,
-                            condicion: "Libre"
-                        };
+
                 
 
                 for (var j = 0; j < reservaciones.length ; j++) {
 
+                    var a = {
+                            fecha: fechaPosta,
+                            precioTemporada: reservaciones[j].precioTemporada,
+                            condicion: "Libre"
+                        };
                     
                     var fechaResguardo = reservaciones[j].fecha;
 
                     if(fechaPosta == fechaResguardo){
                         var a = {
                             fecha: fechaPosta,
+                            precioTemporada: reservaciones[j].precioTemporada,
                             condicion: "Reservado"};
                         break;                       
                     }

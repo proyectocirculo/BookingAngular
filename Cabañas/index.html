@@ -18,12 +18,12 @@
 
 				  	<div class="col-lg-4">
 				  	  <span class="input-group-addon">Fecha de Entrada</span>
-					  <input type="date" class="form-control" ng-model="fechaIni" placeholder="Fecha de Ingreso">
+					  <input type="date" class="form-control" ng-model="fechaIni" placeholder="Fecha de Ingreso" min="{{fechaMin}}">
 					</div>
 
 					<div class="col-lg-4">
 					  <span class="input-group-addon">Fecha de Salida</span>
-					  <input type="date" class="form-control" ng-model="fechaSal" placeholder="Fecha de Ingreso">
+					  <input type="date" class="form-control" ng-model="fechaSal" placeholder="Fecha de Ingreso" min="{{fechaMinMax}}">
 					</div>
 
 					<div class="col-lg-6">
