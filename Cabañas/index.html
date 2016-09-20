@@ -26,6 +26,10 @@
 					  <input type="date" class="form-control" ng-model="fechaSal" placeholder="Fecha de Ingreso" min="{{fechaMinMax}}">
 					</div>
 
+					<div ng-hide="myValue" id="diaAtrasado" class="alert alert-danger alert col-lg-12">
+			            <span ng-bind="alertaUno"></span>
+			        </div>
+
 					<div class="col-lg-6">
 					  <button class="btn btn-primary" ng-click="calcularReservas(fechaIni,fechaSal,cabanas)" id="consulta">Consultar Reservas</button>
 					</div>
@@ -96,6 +100,7 @@
 			                                    <div class="huge">{{fecha.fecha}}</div>
 			                                    <div class="huge">Precio: {{fecha.precioTemporada}}</div>
 			                                    <div>{{fecha.condicion}}</div>
+			                                    <div>Temporada: {{fecha.tipoTemporada}}</div>
 			                                </div>
 			                            </div>
 			                        </div>
