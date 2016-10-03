@@ -68,3 +68,22 @@
 #diaAtrasado{
 	margin-top: 2%;
 }
+
+#lafecha{
+	padding-right: 3px;
+    padding-left: 3px;
+    margin-bottom: 5px;
+}
+
+#date{
+	font-size: 14px;
+}
+
+#texto{
+	padding-left: 10px;
+    padding-right: 10px;
+}
+
+.panel-footer{
+	background-color: #1a181d;
+}
