@@ -11,7 +11,7 @@
         var getCabanas = function(){
             var deferred = $q.defer();
 
-            if(cabanas == null){
+            if(1 == null){
                 $http.get('http://colinadelmanzano.com.ar/pruebas/todos/json')
                 .then(function(result){
                     deferred.resolve(result);
