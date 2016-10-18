@@ -13,18 +13,18 @@
 <body>
 
     <div class="container">
-    	<div class="row" ng-controller="MainController">
+    	<div class="row" id="mainCtrl" ng-controller="MainController">
 
-    		<div class="container form-group">
-				  	<h4>Ingrese las fechas de reservas:</h4>
+    		<div class="container form-group col-lg-3">
+				  	<h4>Seleccione las fechas:</h4>
 
-				  	<div class="col-lg-4">
-				  	  <span class="input-group-addon">Fecha de Entrada</span>
+				  	<div class="col-lg-12 fechasIng">
+				  	  <span class="input-group-addon">Entrada</span>
 					  <input type="date" class="form-control" ng-model="fechaIni" placeholder="Fecha de Ingreso" min="{{fechaMin}}">
 					</div>
 
-					<div class="col-lg-4">
-					  <span class="input-group-addon">Fecha de Salida</span>
+					<div class="col-lg-12 fechasIng">
+					  <span class="input-group-addon">Salida</span>
 					  <input type="date" class="form-control" ng-model="fechaSal" placeholder="Fecha de Ingreso" min="{{fechaMinMax}}">
 					</div>
 
@@ -36,148 +36,148 @@
 					  <button class="btn btn-primary" ng-click="calcularReservas(fechaIni,fechaSal,cabanas)" id="consulta">Consultar Reservas</button>
 					</div>
 
+					<div class="alert alert-success alert-dismissable col-lg-12" id="{{mostrar}}">
+			            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+			            Existen <a class="alert-link">{{cabanasDisponibles}}</a> Cabaña/s Disponibles..
+			        </div>
+
 			</div>
 
-			<div class="alert alert-success alert-dismissable" id="{{mostrar}}">
-	            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-	            Existen <a class="alert-link">{{cabanasDisponibles}}</a> Cabaña/s Disponibles..
-	        </div>
+			<div class="col-lg-9">
+	    		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" ng-repeat="cabana in cabanas">
 
-    		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" ng-repeat="cabana in cabanas">
+				<div class="panel panel-default">
+				    
+				    <div class="panel-heading" role="tab" id="{{cabana.cabanaConreserva}}">
+				      <h4 class="panel-title">
+				        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{cabana.casa}}" aria-expanded="true" id="{{cabana.cabanaConreserva}}">
+				          {{cabana.nombre}} - {{cabana.estado}}
+				        </a>
+				      </h4>
+				    </div>
 
-			  <div class="panel panel-default">
-			    
-			    <div class="panel-heading" role="tab" id="headingOne">
-			      <h4 class="panel-title">
-			        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{cabana.id}}" aria-expanded="true" id="{{cabana.cabanaConreserva}}" aria-controls="{{cabana.id}}">
-			          {{cabana.nombre}} -- {{cabana.id}}
-			        </a>
-			      </h4>
-			    </div>
+				    <div id="{{cabana.casa}}" class="{{primerValor}} container" style="width: 100%;">
+				      <div class="panel-body">
+				      	
+				      	<div class="col-lg-9">
+				      		<h3>{{cabana.nombre}}</h3>
+				      		<h4>{{cabana.descripcion}}</h4>
+				      	</div>
 
-			    <div id="{{cabana.id}}" class="{{primerValor}} container" role="tabpanel" aria-labelledby="headingOne">
-			      <div class="panel-body">
-			      	{{cabana.descripcion}}
+				      	<div class="col-lg-3">
+		                    <div class="panel panel-yellow">
+		                        <div class="panel-heading">
+		                            <div class="row">
+		                                <div class="col-xs-12 text-center">
+	                                    	<h4>DESDE</h4>
+	                                    	<div class="huge">${{cabana.precio}}</div>
+	                                    	<h4>P/Día</h4>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <a href="#">
+		                            <div class="panel-footer">
+		                                <span class="pull-left">RESERVAR</span>
+		                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+		                                <div class="clearfix"></div>
+		                            </div>
+		                        </a>
+		                    </div>
+		                </div>
 
-			      	<h4>Precio Desde: ${{cabana.precio}}</h4>
+				      	<button class="btn btn-primary"> Ver Cabana </button>
 
-			      	<button class="btn btn-primary"> Ver Cabana </button>
+				      </div>
 
-			      </div>
+					   <button class="btn btn-danger" id="fechaReservada" type="button" data-toggle="collapse" data-target="#{{cabana.id+cabana.precio}}" ng-click="getFechasReservadas(fechaIni, fechaSal, cabana.reservas,cabana.temporada)" aria-expanded="false" aria-controls="{{cabana.id+cabana.precio}}">
+						  Ver fechas Reservadas
+					  </button>
+		           
 
-				   <button class="btn btn-danger" id="fechaReservada" type="button" data-toggle="collapse" data-target="#{{cabana.id+cabana.precio}}" ng-click="getFechasReservadas(fechaIni, fechaSal, cabana.reservas,cabana.temporada)" aria-expanded="false" aria-controls="{{cabana.id+cabana.precio}}">
-					  Ver fechas Reservadas
-				  </button>
-
-	              <!--<div class="row">
-		              <div class="collapse col-lg-6" id="{{cabana.precio}}" >
-						  <div class="col-lg-4" id="dias" ng-repeat="fecha in fechas">
-			                <div class="col-lg-3 col-md-6">
-			                    <div class="panel panel-primary">
-			                        <div class="panel-heading" id="verFecha">
-			                            <div class="row" id="{{fecha.condicion}}">
-			                                <div class="col-lg-12 text-left">
-			                                    <div class="huge">{{fecha.fecha}}</div>
-			                                    <div class="huge">Precio: {{fecha.precioTemporada}}</div>
-			                                    <div>{{fecha.condicion}}</div>
-			                                    <div>Temporada: {{fecha.tipoTemporada}}</div>
-			                                </div>
-			                            </div>
-			                        </div>
+		              <div class="row">
+		              	<div class="collapse col-lg-9" id="{{cabana.id+cabana.precio}}">
+			              	<div class="col-lg-3" ng-repeat="fecha in fechas" id="lafecha">
+				              	
+			                    <div ng-if="fecha.condicion == 'Libre'">
+			                    	<div class="'panel panel-primary">
+				                        <div class="panel-heading">
+				                            <div class="row">
+				                                <div class="col-xs-12 text-center" id="texto">
+				                                    <div class="huge" id="date">{{fecha.fecha}}</div>
+				                                    <div>Precio: ${{fecha.precioTemporada}}</div>
+				                                    <div>Temporada: {{fecha.tipoTemporada}}</div>
+				                                </div>
+				                            </div>
+				                        </div>
+				                        <a>
+				                            <div class="panel-footer">
+				                                <span class="pull-left">{{fecha.condicion}}</span>
+				                                <span class="pull-right">
+				                                	<i class="fa fa-check-circle">	
+				                                	</i>
+				                                </span>
+				                                <div class="clearfix"></div>
+				                            </div>
+				                        </a>
+				                    </div>
 			                    </div>
-			                </div>
-			            </div>
+
+			                    <div ng-if="fecha.condicion == 'Reservado'">
+			                    	<div class="'panel panel-red">
+				                        <div class="panel-heading">
+				                            <div class="row">
+				                                <div class="col-xs-12 text-center" id="texto">
+				                                    <div class="huge" id="date">{{fecha.fecha}}</div>
+				                                    <div>Precio: ${{fecha.precioTemporada}}</div>
+				                                    <div>Temporada: {{fecha.tipoTemporada}}</div>
+				                                </div>
+				                            </div>
+				                        </div>
+				                        <a>
+				                            <div class="panel-footer">
+				                                <span class="pull-left">{{fecha.condicion}}</span>
+				                                <span class="pull-right">
+				                                	<i class="fa fa-times-circle">	
+				                                	</i>
+				                                </span>
+				                                <div class="clearfix"></div>
+				                            </div>
+				                        </a>
+				                    </div>
+			                    </div>
+
+			                    <div ng-if="fecha.condicion == 'Sin Lista'">
+			                    	<div class="'panel panel-green">
+				                        <div class="panel-heading">
+				                            <div class="row">
+				                                <div class="col-xs-12 text-center" id="texto">
+				                                    <div class="huge" id="date">{{fecha.fecha}}</div>
+				                                    <div>Precio: ${{fecha.precioTemporada}}</div>
+				                                    <div>Temporada: {{fecha.tipoTemporada}}</div>
+				                                </div>
+				                            </div>
+				                        </div>
+				                        <a>
+				                            <div class="panel-footer">
+				                                <span class="pull-left">{{fecha.condicion}}</span>
+				                                <span class="pull-right">
+				                                	<i class="fa fa-times-circle">	
+				                                	</i>
+				                                </span>
+				                                <div class="clearfix"></div>
+				                            </div>
+				                        </a>
+				                    </div>
+			                    </div>
+	                        </div>
+				            </div>
+			            </div>  
 		              </div>
-	              </div>-->
+				
+				</div>
 
-	              <div class="row">
-	              	<div class="collapse col-lg-6" id="{{cabana.id+cabana.precio}}">
-		              	<div class="col-lg-3" ng-repeat="fecha in fechas" id="lafecha">
-			              	
-		                    <div ng-if="fecha.condicion == 'Libre'">
-		                    	<div class="'panel panel-primary">
-			                        <div class="panel-heading">
-			                            <div class="row">
-			                                <div class="col-xs-12 text-center" id="texto">
-			                                    <div class="huge" id="date">{{fecha.fecha}}</div>
-			                                    <div>Precio: ${{fecha.precioTemporada}}</div>
-			                                    <div>Temporada: {{fecha.tipoTemporada}}</div>
-			                                </div>
-			                            </div>
-			                        </div>
-			                        <a>
-			                            <div class="panel-footer">
-			                                <span class="pull-left">{{fecha.condicion}}</span>
-			                                <span class="pull-right">
-			                                	<i class="fa fa-check-circle">	
-			                                	</i>
-			                                </span>
-			                                <div class="clearfix"></div>
-			                            </div>
-			                        </a>
-			                    </div>
-		                    </div>
-
-		                    <div ng-if="fecha.condicion == 'Reservado'">
-		                    	<div class="'panel panel-red">
-			                        <div class="panel-heading">
-			                            <div class="row">
-			                                <div class="col-xs-12 text-center" id="texto">
-			                                    <div class="huge" id="date">{{fecha.fecha}}</div>
-			                                    <div>Precio: ${{fecha.precioTemporada}}</div>
-			                                    <div>Temporada: {{fecha.tipoTemporada}}</div>
-			                                </div>
-			                            </div>
-			                        </div>
-			                        <a>
-			                            <div class="panel-footer">
-			                                <span class="pull-left">{{fecha.condicion}}</span>
-			                                <span class="pull-right">
-			                                	<i class="fa fa-times-circle">	
-			                                	</i>
-			                                </span>
-			                                <div class="clearfix"></div>
-			                            </div>
-			                        </a>
-			                    </div>
-		                    </div>
-
-		                    <div ng-if="fecha.condicion == 'Sin Lista'">
-		                    	<div class="'panel panel-green">
-			                        <div class="panel-heading">
-			                            <div class="row">
-			                                <div class="col-xs-12 text-center" id="texto">
-			                                    <div class="huge" id="date">{{fecha.fecha}}</div>
-			                                    <div>Precio: ${{fecha.precioTemporada}}</div>
-			                                    <div>Temporada: {{fecha.tipoTemporada}}</div>
-			                                </div>
-			                            </div>
-			                        </div>
-			                        <a>
-			                            <div class="panel-footer">
-			                                <span class="pull-left">{{fecha.condicion}}</span>
-			                                <span class="pull-right">
-			                                	<i class="fa fa-times-circle">	
-			                                	</i>
-			                                </span>
-			                                <div class="clearfix"></div>
-			                            </div>
-			                        </a>
-			                    </div>
-		                    </div>
-
-
-                        </div>
-			            </div>
-		            </div>  
-	              </div>
-	              
-
-
-			    </div>
-
-			  </div>
-			  
+				</div>
+			</div>  
 			  
 			</div>
 

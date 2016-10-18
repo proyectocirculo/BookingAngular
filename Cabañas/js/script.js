@@ -63,7 +63,7 @@
         Cabanas.traerCabanas().then(function(result){
 
             //$scope.cabanas = result.data;
-            $scope.cabanas = [{"casa":"El Buho","id":2,"nombre":"El Buho","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales"
+            $scope.cabanas = [{"casa":"ElBuho","id":2,"nombre":"El Buho","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales"
                               ,"precio":120,"camas":"1","personas":"8","tamanio":"100m2","img":"2El Buho",
 
                             "reservas":[{"fecha":"2016-10-02"},{"fecha":"2016-10-04"},{"fecha":"2016-10-08"},
@@ -92,7 +92,7 @@
 
                                     "servicios":[{"srv":"iconos-_pileta.jpg"},{"srv":"iconos-_auto.jpg"}]},
                               
-                            {"casa":"El Gallo","id":104,"nombre":"El Gallo","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales","precio":400,"camas":"4","personas":"7","tamanio":"","img":"104El Gallo",
+                            {"casa":"ElGallo","id":104,"nombre":"El Gallo","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales","precio":400,"camas":"4","personas":"7","tamanio":"","img":"104El Gallo",
                                     
                             "reservas":[{"fecha":"2016-09-27"},{"fecha":"2016-09-28"},{"fecha":"2016-09-30"},
                                         {"fecha":"2016-10-01"},{"fecha":"2016-10-02"},{"fecha":"2016-10-04"},
@@ -122,7 +122,7 @@
 
                                     "servicios":[{"srv":"iconos-_pileta.jpg"}]},
                               
-                            {"casa":"La Paloma","id":98,"nombre":"La Paloma","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales","precio":500,"camas":"4","personas":"8","tamanio":"","img":"98La Paloma",
+                            {"casa":"LaPaloma","id":98,"nombre":"La Paloma","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales","precio":500,"camas":"4","personas":"8","tamanio":"","img":"98La Paloma",
                                     
                             "reservas":[{"fecha":"2016-09-27"},{"fecha":"2016-09-28"},{"fecha":"2016-09-30"},
                                         {"fecha":"2016-10-01"},{"fecha":"2016-10-02"},{"fecha":"2016-10-04"},
@@ -152,7 +152,7 @@
 
                             "servicios":[{"srv":"iconos-_market.jpg"}]},
                               
-                            {"casa":"El Gato","id":99,"nombre":"El Gato","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales","precio":375,"camas":"4","personas":"8","tamanio":"100m2","img":"99El gato",
+                            {"casa":"ElGato","id":99,"nombre":"El Gato","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales","precio":375,"camas":"4","personas":"8","tamanio":"100m2","img":"99El gato",
                                 
                             "reservas":[{"fecha":"2016-09-27"},{"fecha":"2016-09-28"},{"fecha":"2016-09-30"},
                                         {"fecha":"2016-10-01"},{"fecha":"2016-10-02"},{"fecha":"2016-10-04"},
@@ -179,7 +179,7 @@
                                         {"fecha":"2016-10-31","precioTemporada":50,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-11-01","precioTemporada":90,"tipoTemporada":"Alta"}],                                      "servicios":[{"srv":"iconos-_wifi.jpg"},{"srv":"iconos-_auto.jpg"},{"srv":"iconos-_grill.jpg"}]},
                               
-                              {"casa":"Casa Real","id":106,"nombre":"Casa Real","descripcion":"200m2, 2 cama matrimoniales, 2 camas individuales","precio":760,"camas":"4","personas":"8","tamanio":"200m2","img":"106Casa Real",
+                              {"casa":"CasaReal","id":106,"nombre":"Casa Real","descripcion":"200m2, 2 cama matrimoniales, 2 camas individuales","precio":760,"camas":"4","personas":"8","tamanio":"200m2","img":"106Casa Real",
                                     
                             "reservas":[{"fecha":"2016-10-07"},{"fecha":"2016-10-09"},
                                         {"fecha":"2016-10-12"},{"fecha":"2016-10-13"},{"fecha":"2016-10-14"},
@@ -191,9 +191,9 @@
                                         {"fecha":"2016-10-18","precioTemporada":90,"tipoTemporada":"Alta"},
                                         {"fecha":"2016-10-21","precioTemporada":27,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-20","precioTemporada":100,"tipoTemporada":"Alta"},
-                                        {"fecha":"2016-10-24","precioTemporada":100,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-26","precioTemporada":150,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-27","precioTemporada":200,"tipoTemporada":"Baja"},
+                                        {"fecha":"2016-10-24","precioTemporada":100,"tipoTemporada":"Alta"},
+                                        {"fecha":"2016-10-26","precioTemporada":150,"tipoTemporada":"Alta"},
+                                        {"fecha":"2016-10-27","precioTemporada":200,"tipoTemporada":"Alta"},
                                         {"fecha":"2016-10-29","precioTemporada":90,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-30","precioTemporada":50,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-31","precioTemporada":160,"tipoTemporada":"Baja"},
@@ -322,34 +322,49 @@
                 $scope.myValue = false;
             }else{
 
-                //obtengo la fecha inicial
-                var diaInicial = ("0"+fechaInicial.getDate()).slice(-2);
-                var mesInicial = ("0"+(fechaInicial.getMonth()+1)).slice(-2);
-                var anioInicial = fechaInicial.getFullYear();
-                var fechaPostaInicial = anioInicial+"-"+mesInicial+"-"+diaInicial;
-                //obtengo la fehca final
-                var diaFinal = ("0"+fechaFinal.getDate()).slice(-2);
-                var mesFinal = ("0"+(fechaFinal.getMonth()+1)).slice(-2);
-                var anioFinal = fechaFinal.getFullYear();
-                var fechaPostaFinal = anioFinal+"-"+mesFinal+"-"+diaFinal;
-
                 var cabanaConReserva = [];
                 var cabanaSinReserva = [];
+                var cabanasReservas = [];
+                var fechaPostaInicial; 
                     
                 for (var i=0 ; i<cantidadLoop ; i++) {
 
-                    var cab = cabanas[i].temporada;
+                    var cab = cabanas[i].reservas;
                     var bandera = false;
 
-                    for (var j = 0; j < cab.length; j++) {
-                        var fechaResguardo = cab[j].fecha;
-                        if((fechaResguardo >= fechaPostaInicial)&(fechaResguardo <= fechaPostaFinal)){
-                            //-----------------------
+                    //saco los dias de las cabanas sin reservar
+                    for (var k = 0; k < cab.length; k++) {
+                        cabanasReservas.push(cab[k].fecha);
+                    }
+                    //--------------------------------
+
+                    for (var j = 0; j < (diasDiferencia + 1); j++) {
+                        // sumar dias tras dia
+                        var diaInicialBucle = ("0"+fechaInicial.getDate()).slice(-2);
+                        var mesInicialBucle = ("0"+(fechaInicial.getMonth()+1)).slice(-2);
+                        var anioInicialBucle = fechaInicial.getFullYear();
+                        var fechaPostaBucle = anioInicialBucle+"/"+mesInicialBucle+"/"+diaInicialBucle;
+
+                        var milisegundos=parseInt(j*24*60*60*1000);
+                        var diaSumado = new Date(fechaPostaBucle);
+                        var tiempo = diaSumado.getTime();
+                        diaSumado.setTime(tiempo+milisegundos);
+
+                        var diaInicial = ("0"+diaSumado.getDate()).slice(-2);
+                        var mesInicial = ("0"+(diaSumado.getMonth()+1)).slice(-2);
+                        var anioInicial = diaSumado.getFullYear();
+
+                        fechaPostaInicial = anioInicial+"-"+mesInicial+"-"+diaInicial;
+
+                        //------
+                        var n = cabanasReservas.indexOf(fechaPostaInicial);
+                        if(n >= 0){
                             bandera = true;
-                            //-----------------------
+                            break;
                         }
 
                     }
+
                     var ReserTest = [];
 
                     if (bandera == true){
@@ -377,6 +392,7 @@
                                     temporada: cabanas[i].temporada,
                                     servicios: cabanas[i].servicios,
                                     cabanaConreserva: "conReserva",
+                                    estado: "No Disponible",
                                     }
                         cabanaConReserva.push(a);
                     }else{
@@ -401,6 +417,7 @@
                                     temporada: cabanas[i].temporada,
                                     servicios: cabanas[i].servicios,
                                     cabanaConreserva: "sinReserva",
+                                    estado: "Fechas Disponibles"
                                     }
                         cabanaSinReserva.push(a);
                         $scope.cabanasDisponibles += 1;

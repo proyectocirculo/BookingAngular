@@ -15,7 +15,7 @@
 }
 
 #consulta{
-	margin-top: 3%;
+	margin-top: 10%;
 }
 
 #dias{
@@ -42,6 +42,7 @@
 
 #mostrar{
 	display: inherit;
+	margin-top: 4%;
 }
 
 #nomostrar{
@@ -49,11 +50,11 @@
 }
 
 #sinReserva{
-	background-color: white;
+	background-color: #1eb702;
 }
 
 #conReserva{
-	background-color: #2dd20e;
+	background-color: #ea2814;
 }
 
 #Reservado{
@@ -86,4 +87,12 @@
 
 .panel-footer{
 	background-color: #1a181d;
+}
+
+#mainCtrl{
+	margin-top: 4%;
+}
+
+.fechasIng{
+	margin-top: 3%;
 }
