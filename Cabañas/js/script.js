@@ -34,7 +34,7 @@
 
     .controller('MainController',function($scope,Cabanas){
 
-        $scope.primerValor = "in";
+        //$scope.primerValor = "in";
         $scope.mostrar = "nomostrar";
 
         $scope.fechaIni = new Date();
@@ -99,7 +99,7 @@
                                         {"fecha":"2016-10-05"},{"fecha":"2016-10-07"},{"fecha":"2016-10-09"},
                                         {"fecha":"2016-10-12"},{"fecha":"2016-10-13"},{"fecha":"2016-10-14"},
                                         {"fecha":"2016-10-16"},{"fecha":"2016-10-17"},{"fecha":"2016-10-19"},
-                                        {"fecha":"2016-10-20"},{"fecha":"2016-10-22"},{"fecha":"2016-10-23"}],
+                                        {"fecha":"2016-10-20"},{"fecha":"2016-10-21"},{"fecha":"2016-10-23"}],
                             //array temporada    
                             "temporada":[{"fecha":"2016-09-29","precioTemporada":90,"tipoTemporada":"Alta"},
                                         {"fecha":"2016-10-03","precioTemporada":90,"tipoTemporada":"Baja"},
@@ -109,7 +109,7 @@
                                         {"fecha":"2016-10-11","precioTemporada":100,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-15","precioTemporada":150,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-18","precioTemporada":200,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-21","precioTemporada":90,"tipoTemporada":"Baja"},
+                                        {"fecha":"2016-10-22","precioTemporada":90,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-24","precioTemporada":50,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-25","precioTemporada":160,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-26","precioTemporada":200,"tipoTemporada":"Baja"},
@@ -131,7 +131,7 @@
                                         {"fecha":"2016-10-16"},{"fecha":"2016-10-17"},{"fecha":"2016-10-19"},
                                         {"fecha":"2016-10-20"},{"fecha":"2016-10-22"},{"fecha":"2016-10-23"}],
                             //array temporada    
-                            "temporada":[{"fecha":"2016-09-29","precioTemporada":90,"tipoTemporada":"Alta"},
+                            "temporada":[{"fecha":"2016-09-29","precioTemporada":37,"tipoTemporada":"Alta"},
                                         {"fecha":"2016-10-03","precioTemporada":90,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-04","precioTemporada":90,"tipoTemporada":"Alta"},
                                         {"fecha":"2016-10-05","precioTemporada":120,"tipoTemporada":"Baja"},
@@ -177,14 +177,14 @@
                                         {"fecha":"2016-10-29","precioTemporada":150,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-30","precioTemporada":200,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-31","precioTemporada":50,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-11-01","precioTemporada":90,"tipoTemporada":"Alta"}],                                      "servicios":[{"srv":"iconos-_wifi.jpg"},{"srv":"iconos-_auto.jpg"},{"srv":"iconos-_grill.jpg"}]},
+                                        {"fecha":"2016-11-05","precioTemporada":90,"tipoTemporada":"Alta"}],                                      "servicios":[{"srv":"iconos-_wifi.jpg"},{"srv":"iconos-_auto.jpg"},{"srv":"iconos-_grill.jpg"}]},
                               
                               {"casa":"CasaReal","id":106,"nombre":"Casa Real","descripcion":"200m2, 2 cama matrimoniales, 2 camas individuales","precio":760,"camas":"4","personas":"8","tamanio":"200m2","img":"106Casa Real",
                                     
                             "reservas":[{"fecha":"2016-10-07"},{"fecha":"2016-10-09"},
                                         {"fecha":"2016-10-12"},{"fecha":"2016-10-13"},{"fecha":"2016-10-14"},
-                                        {"fecha":"2016-10-16"},{"fecha":"2016-10-17"},{"fecha":"2016-10-19"},
-                                        {"fecha":"2016-10-20"},{"fecha":"2016-10-22"},{"fecha":"2016-10-23"}],
+                                        {"fecha":"2016-11-01"},{"fecha":"2016-11-02"},{"fecha":"2016-11-03"},
+                                        {"fecha":"2016-11-04"},{"fecha":"2016-11-05"},{"fecha":"2016-10-23"}],
                             //array temporada    
                             "temporada":[{"fecha":"2016-10-10","precioTemporada":90,"tipoTemporada":"Alta"},
                                         {"fecha":"2016-10-11","precioTemporada":90,"tipoTemporada":"Baja"},
@@ -200,7 +200,7 @@
                                         {"fecha":"2016-11-01","precioTemporada":200,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-11-02","precioTemporada":100,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-11-03","precioTemporada":100,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-11-05","precioTemporada":150,"tipoTemporada":"Baja"},
+                                        {"fecha":"2016-11-04","precioTemporada":150,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-11-07","precioTemporada":200,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-11-08","precioTemporada":50,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-11-09","precioTemporada":90,"tipoTemporada":"Alta"}],   
@@ -353,6 +353,7 @@
         };
         //------------------------------------
 
+
         $scope.calcularReservas = function(fechaInicial, fechaFinal, cabanas) {
 
             var cantidadLoop = cabanas.length;
@@ -373,7 +374,7 @@
                 var cabanaConReserva = [];
                 var cabanaSinReserva = [];
                 var cabanasReservas = [];
-                var fechaPostaInicial; 
+                var fechaPostaInicial;
                     
                 for (var i=0 ; i<cantidadLoop ; i++) {
 
@@ -482,14 +483,16 @@
                         return a.precio - b.precio;
                     });
 
+                    cabanaSinReserva[0].primero = "in";
                     $scope.cabanas = cabanaSinReserva;
                     $scope.cabanas = $scope.cabanas.concat(cabanaConReserva);
-                    $scope.cabanas[0].primero = $scope.primerValor;
+                    //$scope.cabanas[0].primero = "in";
 
                 }else{
+                    cabanaConReserva[0].primero = "in";
                     $scope.cabanas = cabanaConReserva;
-                    var aver = $scope.cabanas[0];
-                    $scope.cabanas[0].primero = $scope.primerValor;
+                    //var aver = $scope.cabanas[0];
+                    //$scope.cabanas[0].primero = "in";
                 }
 
 
