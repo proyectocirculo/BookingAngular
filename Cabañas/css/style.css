@@ -8,6 +8,7 @@
 
 #fechaReservada{
 	margin-bottom: 2%;
+	margin-left: 1.5%;
 }
 
 .container{
@@ -50,11 +51,12 @@
 }
 
 #sinReserva{
-	background-color: #1eb702;
+	background-color: #000000;
+	color: white;
 }
 
 #conReserva{
-	background-color: #ea2814;
+	background-color: #ffffff;
 }
 
 #Reservado{
@@ -96,3 +98,54 @@
 .fechasIng{
 	margin-top: 3%;
 }
+
+.squad-fechas{
+    width: 100%;
+    height: 27px;
+    padding-top: 8px;
+    border: thin;
+    border-left-color: #666;
+    border-left-style: thin solid;
+    border-right-color: #666;
+    border-right-style: thin solid;
+    font-size: 9px;
+    text-align: center;
+    float: left;
+    background-color:#E4E4E4;
+    cursor:pointer;
+}
+
+.squad-fechas-active{
+    width: 100%;
+    height: 27px;
+    padding-top: 8px;
+    border: thin;
+    border-left-color: #666;
+    border-left-style: thin solid;
+    border-right-color: #666;
+    border-right-style: thin solid;
+    font-size: 9px;
+    text-align: center;
+    float: left;
+    background-color:#096;
+    color:#FFF;
+    cursor:pointer;
+}
+
+.squad-fechas-disable{
+    width: 100%;
+    height: 27px;
+    padding-top: 8px;
+    border: thin;
+    border-left-color: #666;
+    border-left-style: thin solid;
+    border-right-color: #666;
+    border-right-style: thin solid;
+    font-size: 9px;
+    text-align: center;
+    float: left;
+    background-color:#CCC;
+    color:#999;
+    cursor:pointer;
+    }
+

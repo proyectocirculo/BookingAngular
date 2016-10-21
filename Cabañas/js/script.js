@@ -34,7 +34,7 @@
 
     .controller('MainController',function($scope,Cabanas){
 
-        $scope.primerValor = "panel-collapse collapse";
+        $scope.primerValor = "in";
         $scope.mostrar = "nomostrar";
 
         $scope.fechaIni = new Date();
@@ -147,8 +147,8 @@
                                         {"fecha":"2016-10-28","precioTemporada":100,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-29","precioTemporada":150,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-30","precioTemporada":200,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-31","precioTemporada":50,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-11-01","precioTemporada":90,"tipoTemporada":"Alta"}],   
+                                        {"fecha":"2016-11-01","precioTemporada":50,"tipoTemporada":"Baja"},
+                                        {"fecha":"2016-11-05","precioTemporada":90,"tipoTemporada":"Alta"}],   
 
                             "servicios":[{"srv":"iconos-_market.jpg"}]},
                               
@@ -256,9 +256,53 @@
                 var anioInicial = diaSumado.getFullYear();
                 var fechaPosta = anioInicial+"-"+mesInicial+"-"+diaInicial;
 
+                var mesEscrito;
+
+                switch (mesInicial) {
+                    case "01":
+                        mesEscrito = "Enero";
+                        break;
+                    case "02":
+                        mesEscrito = "Febrero";
+                        break;
+                    case "03":
+                        mesEscrito = "Marzo";
+                        break;
+                    case "04":
+                        mesEscrito = "Abril";
+                        break;
+                    case "05":
+                        mesEscrito = "Mayo";
+                        break;
+                    case "06":
+                        mesEscrito = "Junio";
+                        break;
+                    case "07":
+                        mesEscrito = "Julio";
+                        break;
+                    case "08":
+                        mesEscrito = "Agosto";
+                        break;
+                    case "09":
+                        mesEscrito = "Septiembre";
+                        break;                                
+                    case "10":
+                        mesEscrito = "Octubre";
+                        break;
+                    case "11":
+                        mesEscrito = "Noviembre";
+                        break;
+                    case "12":
+                        mesEscrito = "Diciembre";
+                        break;    
+                }
+
+
                 for (var j = 0; j < reservaciones.length ; j++) {
 
                     var a = {
+                            dia: diaInicial,
+                            mes: mesEscrito,
                             fecha: fechaPosta,
                             precioTemporada: " -",
                             condicion: "Sin Lista",
@@ -273,6 +317,8 @@
 
                     if(n >= 0){
                         var a = {
+                            dia: diaInicial,
+                            mes: mesEscrito,
                             fecha: fechaPosta,
                             precioTemporada: " -",
                             condicion: "Reservado",
@@ -282,6 +328,8 @@
                         break; 
                     }else if(x >= 0){
                         var a = {
+                            dia: diaInicial,
+                            mes: mesEscrito,
                             fecha: fechaPosta,
                             precioTemporada: reservaciones[x].precioTemporada,
                             condicion: "Libre",
@@ -381,6 +429,7 @@
                         var a = {
                                     casa: cabanas[i].casa,
                                     id: cabanas[i].id,
+                                    primero: "",
                                     nombre: cabanas[i].nombre,
                                     descripcion: cabanas[i].descripcion,
                                     precio: ReserTest[0].precioTemporada,
@@ -406,6 +455,7 @@
                         var a = {
                                     casa: cabanas[i].casa,
                                     id: cabanas[i].id,
+                                    primero: "",
                                     nombre: cabanas[i].nombre,
                                     descripcion: cabanas[i].descripcion,
                                     precio: ReserTest[0].precioTemporada,
@@ -434,10 +484,12 @@
 
                     $scope.cabanas = cabanaSinReserva;
                     $scope.cabanas = $scope.cabanas.concat(cabanaConReserva);
+                    $scope.cabanas[0].primero = $scope.primerValor;
 
                 }else{
                     $scope.cabanas = cabanaConReserva;
-                    
+                    var aver = $scope.cabanas[0];
+                    $scope.cabanas[0].primero = $scope.primerValor;
                 }
 
 
