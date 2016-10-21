@@ -12,7 +12,7 @@
             var deferred = $q.defer();
 
             if(cabanas == null){
-                $http.get('http://colinadelmanzano.com.ar/pruebas/todos/json')
+                $http.get('https://proyectocirculo.github.io/BookingAngular/casas/js/todos.json')
                 .then(function(result){
                     deferred.resolve(result);
                 },
