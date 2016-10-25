@@ -66,130 +66,89 @@
             $scope.cabanas = [{"casa":"ElBuho","id":2,"nombre":"El Buho","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales"
                               ,"precio":120,"camas":"1","personas":"8","tamanio":"100m2","img":"2El Buho",
 
-                            "reservas":[{"fecha":"2016-10-02"},{"fecha":"2016-10-04"},{"fecha":"2016-10-08"},
-                                        {"fecha":"2016-10-01"},{"fecha":"2016-10-02"},{"fecha":"2016-10-04"},
-                                        {"fecha":"2016-10-05"},{"fecha":"2016-10-08"},{"fecha":"2016-10-09"},
-                                        {"fecha":"2016-10-12"},{"fecha":"2016-10-13"},{"fecha":"2016-10-14"},
-                                        {"fecha":"2016-10-16"},{"fecha":"2016-10-17"},{"fecha":"2016-10-19"},
-                                        {"fecha":"2016-10-20"},{"fecha":"2016-10-22"}],
+                            "reservas":[{"fecha":"2016-10-23"},{"fecha":"2016-10-24"},
+                                        {"fecha":"2016-10-25"},{"fecha":"2016-10-28"},{"fecha":"2016-11-01"},
+                                        {"fecha":"2016-11-03"}],
                             //array temporada    
-                            "temporada":[{"fecha":"2016-10-05","precioTemporada":180,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-06","precioTemporada":90,"tipoTemporada":"Alta"},
-                                        {"fecha":"2016-10-07","precioTemporada":30,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-10","precioTemporada":100,"tipoTemporada":"Alta"},
-                                        {"fecha":"2016-10-15","precioTemporada":150,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-20","precioTemporada":200,"tipoTemporada":"Baja"},
+                            "temporada":[{"fecha":"2016-10-20","precioTemporada":200,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-21","precioTemporada":90,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-24","precioTemporada":50,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-25","precioTemporada":160,"tipoTemporada":"Baja"},
+                                        {"fecha":"2016-10-24","precioTemporada":60,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-26","precioTemporada":200,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-27","precioTemporada":100,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-28","precioTemporada":100,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-29","precioTemporada":150,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-30","precioTemporada":200,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-31","precioTemporada":50,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-11-01","precioTemporada":90,"tipoTemporada":"Alta"}],            
+                                        {"fecha":"2016-10-29","precioTemporada":90,"tipoTemporada":"Baja"},
+                                        {"fecha":"2016-11-02","precioTemporada":150,"tipoTemporada":"Baja"},
+                                        {"fecha":"2016-11-10","precioTemporada":200,"tipoTemporada":"Baja"},
+                                        {"fecha":"2016-11-11","precioTemporada":50,"tipoTemporada":"Baja"},
+                                        {"fecha":"2016-11-13","precioTemporada":90,"tipoTemporada":"Alta"},
+                                        {"fecha":"2016-11-17","precioTemporada":90,"tipoTemporada":"Alta"}],            
 
                                     "servicios":[{"srv":"iconos-_pileta.jpg"},{"srv":"iconos-_auto.jpg"}]},
                               
-                            {"casa":"ElGallo","id":104,"nombre":"El Gallo","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales","precio":400,"camas":"4","personas":"7","tamanio":"","img":"104El Gallo",
+                            {"casa":"ElGallo","id":104,"nombre":"El Gallote","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales","precio":400,"camas":"4","personas":"7","tamanio":"","img":"104El Gallo",
                                     
-                            "reservas":[{"fecha":"2016-09-27"},{"fecha":"2016-09-28"},{"fecha":"2016-09-30"},
-                                        {"fecha":"2016-10-01"},{"fecha":"2016-10-02"},{"fecha":"2016-10-04"},
-                                        {"fecha":"2016-10-05"},{"fecha":"2016-10-07"},{"fecha":"2016-10-09"},
-                                        {"fecha":"2016-10-12"},{"fecha":"2016-10-13"},{"fecha":"2016-10-14"},
-                                        {"fecha":"2016-10-16"},{"fecha":"2016-10-17"},{"fecha":"2016-10-19"},
-                                        {"fecha":"2016-10-20"},{"fecha":"2016-10-21"},{"fecha":"2016-10-23"}],
+                            "reservas":[{"fecha":"2016-10-26"},{"fecha":"2016-10-27"},{"fecha":"2016-11-01"},
+                                        {"fecha":"2016-10-06"},{"fecha":"2016-11-07"}],
                             //array temporada    
-                            "temporada":[{"fecha":"2016-09-29","precioTemporada":90,"tipoTemporada":"Alta"},
-                                        {"fecha":"2016-10-03","precioTemporada":90,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-04","precioTemporada":90,"tipoTemporada":"Alta"},
-                                        {"fecha":"2016-10-08","precioTemporada":50,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-10","precioTemporada":100,"tipoTemporada":"Alta"},
-                                        {"fecha":"2016-10-11","precioTemporada":100,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-15","precioTemporada":150,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-18","precioTemporada":200,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-22","precioTemporada":90,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-24","precioTemporada":50,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-25","precioTemporada":160,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-26","precioTemporada":200,"tipoTemporada":"Baja"},
+                            "temporada":[{"fecha":"2016-10-25","precioTemporada":160,"tipoTemporada":"Baja"},
+                                        {"fecha":"2016-10-26","precioTemporada":43,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-27","precioTemporada":100,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-28","precioTemporada":100,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-29","precioTemporada":150,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-30","precioTemporada":200,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-31","precioTemporada":50,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-11-01","precioTemporada":90,"tipoTemporada":"Alta"}],   
+                                        {"fecha":"2016-11-02","precioTemporada":90,"tipoTemporada":"Alta"},
+                                        {"fecha":"2016-11-03","precioTemporada":90,"tipoTemporada":"Alta"},
+                                        {"fecha":"2016-11-04","precioTemporada":40,"tipoTemporada":"Alta"},
+                                        {"fecha":"2016-11-05","precioTemporada":90,"tipoTemporada":"Alta"},
+                                        {"fecha":"2016-11-13","precioTemporada":90,"tipoTemporada":"Alta"}],   
 
                                     "servicios":[{"srv":"iconos-_pileta.jpg"}]},
                               
                             {"casa":"LaPaloma","id":98,"nombre":"La Paloma","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales","precio":500,"camas":"4","personas":"8","tamanio":"","img":"98La Paloma",
                                     
-                            "reservas":[{"fecha":"2016-09-27"},{"fecha":"2016-09-28"},{"fecha":"2016-09-30"},
-                                        {"fecha":"2016-10-01"},{"fecha":"2016-10-02"},{"fecha":"2016-10-04"},
-                                        {"fecha":"2016-10-05"},{"fecha":"2016-10-07"},{"fecha":"2016-10-09"},
-                                        {"fecha":"2016-10-12"},{"fecha":"2016-10-13"},{"fecha":"2016-10-14"},
-                                        {"fecha":"2016-10-16"},{"fecha":"2016-10-17"},{"fecha":"2016-10-19"},
-                                        {"fecha":"2016-10-20"},{"fecha":"2016-10-22"},{"fecha":"2016-10-23"}],
+                            "reservas":[{"fecha":"2016-10-27"},{"fecha":"2016-11-02"},{"fecha":"2016-11-03"},
+                                        {"fecha":"2016-11-04"},{"fecha":"2016-11-06"},{"fecha":"2016-11-09"}],
                             //array temporada    
                             "temporada":[{"fecha":"2016-09-29","precioTemporada":37,"tipoTemporada":"Alta"},
-                                        {"fecha":"2016-10-03","precioTemporada":90,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-04","precioTemporada":90,"tipoTemporada":"Alta"},
-                                        {"fecha":"2016-10-05","precioTemporada":120,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-06","precioTemporada":100,"tipoTemporada":"Alta"},
-                                        {"fecha":"2016-10-07","precioTemporada":100,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-08","precioTemporada":150,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-09","precioTemporada":200,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-10","precioTemporada":90,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-24","precioTemporada":50,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-25","precioTemporada":160,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-26","precioTemporada":200,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-27","precioTemporada":100,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-28","precioTemporada":100,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-29","precioTemporada":150,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-30","precioTemporada":200,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-11-01","precioTemporada":50,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-11-05","precioTemporada":90,"tipoTemporada":"Alta"}],   
+                                        {"fecha":"2016-11-05","precioTemporada":90,"tipoTemporada":"Alta"},
+                                        {"fecha":"2016-11-07","precioTemporada":90,"tipoTemporada":"Alta"},
+                                        {"fecha":"2016-11-08","precioTemporada":90,"tipoTemporada":"Alta"}],   
 
                             "servicios":[{"srv":"iconos-_market.jpg"}]},
                               
-                            {"casa":"ElGato","id":99,"nombre":"El Gato","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales","precio":375,"camas":"4","personas":"8","tamanio":"100m2","img":"99El gato",
+                            {"casa":"ElGato","id":99,"nombre":"El Gatito","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales","precio":375,"camas":"4","personas":"8","tamanio":"100m2","img":"99El gato",
                                 
-                            "reservas":[{"fecha":"2016-09-27"},{"fecha":"2016-09-28"},{"fecha":"2016-09-30"},
-                                        {"fecha":"2016-10-01"},{"fecha":"2016-10-02"},{"fecha":"2016-10-04"},
-                                        {"fecha":"2016-10-05"},{"fecha":"2016-10-07"},{"fecha":"2016-10-09"},
-                                        {"fecha":"2016-10-16"},{"fecha":"2016-10-17"},{"fecha":"2016-10-19"},
-                                        {"fecha":"2016-10-20"},{"fecha":"2016-10-22"},{"fecha":"2016-10-23"}],
+                            "reservas":[{"fecha":"2016-10-23"},{"fecha":"2016-10-24"},{"fecha":"2016-10-25"},
+                                        {"fecha":"2016-10-29"},{"fecha":"2016-11-01"},{"fecha":"2016-11-04"}],
                             //array temporada    
-                            "temporada":[{"fecha":"2016-09-29","precioTemporada":90,"tipoTemporada":"Alta"},
-                                        {"fecha":"2016-10-03","precioTemporada":90,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-06","precioTemporada":90,"tipoTemporada":"Alta"},
-                                        {"fecha":"2016-10-08","precioTemporada":45,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-10","precioTemporada":100,"tipoTemporada":"Alta"},
-                                        {"fecha":"2016-10-11","precioTemporada":100,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-15","precioTemporada":150,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-18","precioTemporada":200,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-21","precioTemporada":90,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-24","precioTemporada":50,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-25","precioTemporada":160,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-26","precioTemporada":200,"tipoTemporada":"Baja"},
+                            "temporada":[{"fecha":"2016-10-24","precioTemporada":22,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-27","precioTemporada":100,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-28","precioTemporada":100,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-29","precioTemporada":150,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-30","precioTemporada":200,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-31","precioTemporada":50,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-11-05","precioTemporada":90,"tipoTemporada":"Alta"}],                                      "servicios":[{"srv":"iconos-_wifi.jpg"},{"srv":"iconos-_auto.jpg"},{"srv":"iconos-_grill.jpg"}]},
+                                        {"fecha":"2016-11-02","precioTemporada":50,"tipoTemporada":"Baja"},
+                                        {"fecha":"2016-11-03","precioTemporada":90,"tipoTemporada":"Alta"},
+                                        {"fecha":"2016-11-05","precioTemporada":33,"tipoTemporada":"Alta"},
+                                        {"fecha":"2016-11-06","precioTemporada":36,"tipoTemporada":"Alta"},
+                                        {"fecha":"2016-11-07","precioTemporada":90,"tipoTemporada":"Alta"},
+                                        {"fecha":"2016-11-08","precioTemporada":90,"tipoTemporada":"Alta"},
+                                        {"fecha":"2016-11-09","precioTemporada":90,"tipoTemporada":"Alta"},
+                                        {"fecha":"2016-11-10","precioTemporada":90,"tipoTemporada":"Alta"}],                                      "servicios":[{"srv":"iconos-_wifi.jpg"},{"srv":"iconos-_auto.jpg"},{"srv":"iconos-_grill.jpg"}]},
                               
                               {"casa":"CasaReal","id":106,"nombre":"Casa Real","descripcion":"200m2, 2 cama matrimoniales, 2 camas individuales","precio":760,"camas":"4","personas":"8","tamanio":"200m2","img":"106Casa Real",
                                     
-                            "reservas":[{"fecha":"2016-10-07"},{"fecha":"2016-10-09"},
+                            "reservas":[{"fecha":"2016-10-07"},{"fecha":"2016-10-09"},{"fecha":"2016-10-11"},
                                         {"fecha":"2016-10-12"},{"fecha":"2016-10-13"},{"fecha":"2016-10-14"},
                                         {"fecha":"2016-11-01"},{"fecha":"2016-11-02"},{"fecha":"2016-11-03"},
-                                        {"fecha":"2016-11-04"},{"fecha":"2016-11-05"},{"fecha":"2016-10-23"}],
+                                        {"fecha":"2016-11-04"},{"fecha":"2016-11-05"}],
                             //array temporada    
-                            "temporada":[{"fecha":"2016-10-10","precioTemporada":90,"tipoTemporada":"Alta"},
-                                        {"fecha":"2016-10-11","precioTemporada":90,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-10-18","precioTemporada":90,"tipoTemporada":"Alta"},
-                                        {"fecha":"2016-10-21","precioTemporada":27,"tipoTemporada":"Baja"},
+                            "temporada":[{"fecha":"2016-10-21","precioTemporada":27,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-20","precioTemporada":100,"tipoTemporada":"Alta"},
                                         {"fecha":"2016-10-24","precioTemporada":100,"tipoTemporada":"Alta"},
                                         {"fecha":"2016-10-26","precioTemporada":150,"tipoTemporada":"Alta"},
@@ -197,13 +156,12 @@
                                         {"fecha":"2016-10-29","precioTemporada":90,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-30","precioTemporada":50,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-10-31","precioTemporada":160,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-11-01","precioTemporada":200,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-11-02","precioTemporada":100,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-11-03","precioTemporada":100,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-11-04","precioTemporada":150,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-11-07","precioTemporada":200,"tipoTemporada":"Baja"},
                                         {"fecha":"2016-11-08","precioTemporada":50,"tipoTemporada":"Baja"},
-                                        {"fecha":"2016-11-09","precioTemporada":90,"tipoTemporada":"Alta"}],   
+                                        {"fecha":"2016-11-09","precioTemporada":90,"tipoTemporada":"Alta"},
+                                        {"fecha":"2016-11-12","precioTemporada":45,"tipoTemporada":"Alta"},
+                                        {"fecha":"2016-11-15","precioTemporada":90,"tipoTemporada":"Alta"},
+                                        {"fecha":"2016-11-16","precioTemporada":90,"tipoTemporada":"Alta"}],   
 
                                     "servicios":[{"srv":"iconos-_deck.jpg"},{"srv":"iconos-_wifi.jpg"},{"srv":"iconos-_grill.jpg"}]}]
             //$scope.fechaIni = new Date();
@@ -373,12 +331,12 @@
 
                 var cabanaConReserva = [];
                 var cabanaSinReserva = [];
-                var cabanasReservas = [];
                 var fechaPostaInicial;
                     
                 for (var i=0 ; i<cantidadLoop ; i++) {
-
-                    var cab = cabanas[i].reservas;
+                    var cabanasReservas = [];
+                    var cab = [];
+                    cab = cabanas[i].reservas;
                     var bandera = false;
 
                     //saco los dias de las cabanas sin reservar
@@ -415,12 +373,42 @@
                     }
 
                     var ReserTest = [];
+                    ReserTest = cabanas[i].temporada;
+                    var diaInicialPrecio = ("0"+fechaInicial.getDate()).slice(-2);
+                    var mesInicialPrecio = ("0"+(fechaInicial.getMonth()+1)).slice(-2);
+                    mesInicialPrecio = mesInicialPrecio - 1;
+                    var anioInicialPrecio = fechaInicial.getFullYear();
+                    var fechaPrecioInicial = new Date(anioInicialPrecio,mesInicialPrecio,diaInicialPrecio);
+
+                    var diaFinalPrecio = ("0"+fechaFinal.getDate()).slice(-2);
+                    var mesFinalPrecio = ("0"+(fechaFinal.getMonth()+1)).slice(-2);
+                    var anioFinalPrecio = fechaFinal.getFullYear();
+                    mesFinalPrecio = mesFinalPrecio - 1;
+                    var fechaPrecioFinal = new Date(anioFinalPrecio,mesFinalPrecio,diaFinalPrecio)
+                    //--extraigo las fecha consultadas-------------------------
+                    var arrayfechaPrecio = [];
+                    for (var k = 0; k < ReserTest.length ; k++) {
+                        
+                        var t = ReserTest[k].fecha;
+                        var aniot = t.substring(0,4);
+                        var mest = t.substring(5,7);
+                        mest = mest - 1;
+                        var diat = t.substring(8,10);
+                        var fechat = new Date(aniot,mest,diat);
+
+                        if( (fechat >= fechaPrecioInicial) && (fechat <= fechaPrecioFinal) ){
+                            arrayfechaPrecio.push(ReserTest[k]);
+                        }
+                        
+                    }
+
+                    if( arrayfechaPrecio.length > 0 ){
+                        ReserTest = arrayfechaPrecio;
+                    }
+                    //---------------------------
 
                     if (bandera == true){
                         //quiere decir que existe por lo menos una fecha que este entre los reservados
-
-                        //-------------------------
-                        ReserTest = cabanas[i].temporada;
 
                         ReserTest.sort(function(a, b){
                             return a.precioTemporada - b.precioTemporada;
@@ -447,8 +435,7 @@
                         cabanaConReserva.push(a);
                     }else{
 
-                        var ReserTest = cabanas[i].temporada;
-
+                        
                         ReserTest.sort(function(a, b){
                             return a.precioTemporada - b.precioTemporada;
                         });
