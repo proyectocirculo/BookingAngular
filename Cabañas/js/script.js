@@ -63,7 +63,8 @@
 
         Cabanas.traerCabanas().then(function(result){
 
-            //$scope.cabanas = result.data;
+            $scope.cabanas = result.data;
+            /*
             $scope.cabanas = [{"casa":"ElBuho","id":2,"nombre":"El Buho","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales"
                               ,"precio":120,"camas":"1","personas":"8","tamanio":"100m2","img":"2El Buho",
 
@@ -222,6 +223,7 @@
             //var milisegundos=parseInt(15*24*60*60*1000);
             //var tiempo = $scope.fechaSal.getTime();
             //$scope.fechaSal.setTime(tiempo+milisegundos);
+            */
             //------
             $scope.nroAdulto = 1;
             //------
