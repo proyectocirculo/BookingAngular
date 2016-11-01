@@ -15,7 +15,6 @@
     <div class="container">
     	<div class="row" id="mainCtrl" ng-controller="MainController">
 
-
     		<div class="container form-group col-lg-3">
 				  	<h4>Seleccione las fechas:</h4>
 
@@ -31,16 +30,20 @@
 
 					<div class="col-lg-12 fechasIng">
 					  <span class="input-group-addon">Cantidad de Personas (Adultos)</span>
-					  <input type="number" class="form-control" min="1" step="1">
+					  <input type="number" ng-model="nroAdulto" value="{{nroAdulto}}" class="form-control" min="1" step="1">
 					</div>
 
 					<div class="col-lg-12 fechasIng">
 					  <span class="input-group-addon">Cantidad de Personas (Menores)</span>
-					  <input type="number" class="form-control" min="1" step="1">
+					  <input type="number" ng-model="nroMenor" class="form-control" min="1" step="1">
 					</div>
 
 					<div ng-hide="myValue" id="diaAtrasado" class="alert alert-danger alert col-lg-12">
 			            <span ng-bind="alertaUno"></span>
+			        </div>
+
+			        <div ng-hide="myValor" id="diaAtrasado" class="alert alert-danger alert col-lg-12">
+			            <span ng-bind="alertaAdulto"></span>
 			        </div>
 
 					<div class="col-lg-6">
@@ -109,8 +112,11 @@
 			              	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 background45lines" ng-repeat="fecha in fechas" id="lafecha">
 				              	
 			                    <div ng-if="fecha.condicion == 'Libre'">
-			                    	<div class="squad-fechas-active" data-toggle="tooltip" data-placement="top" title="Precio: ${{fecha.precioTemporada}} - Temporada: {{fecha.tipoTemporada}}">{{fecha.mes}} - {{fecha.dia}}
-			                    	</div>
+			                    	<!-- Calcula el precio de las cantidad de personas -->
+			                    	<a href="" ng-click="getPreciosPax(nroAdulto,nroMenor,fecha.preciosPax)">
+				                    	<div class="squad-fechas-active" data-toggle="tooltip" data-placement="top" title="Precio: ${{fecha.precioTemporada}} - Temporada: {{fecha.tipoTemporada}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{fecha.mes}} - {{fecha.dia}}
+				                    	</div>
+			                    	</a>
 			                    </div>
 
 			                    <div ng-if="fecha.condicion == 'Reservado'">
@@ -125,7 +131,28 @@
 
 	                        </div>
 
+	                        <div class="col-lg-12">
+					        	<div class="alert alert-success col-lg-12" id="alertasFechas" role="alert">
+					        		<div class="col-lg-12">
+					        			<div class="col-lg-2 col-sm-2" id="cartelAlerta">
+					        				<strong>Ver Tarifas {{preciosPax[1]}}</strong>
+					        			</div>
+					        			
+					        			<div class="col-lg-10 col-sm-10">
+					        				<ul class="pagination" id="preciosPax" ng-repeat="pre in preciosP">
+							        			<li><a href="">{{pre.nroPersonas}}Pax - ${{pre.fechasp}}</a></li>
+							        		</ul>
+					        			</div>
+
+					        		</div>
+
+					        	</div>
+					        </div>
+
 				        </div>
+
+				        
+
 			          </div>
 
 		              </div>
@@ -184,8 +211,10 @@
 			              	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 background45lines" ng-repeat="fecha in fechas" id="lafecha">
 				              	
 			                    <div ng-if="fecha.condicion == 'Libre'">
-			                    	<div class="squad-fechas-active" data-toggle="tooltip" data-placement="top" title="Precio: ${{fecha.precioTemporada}} - Temporada: {{fecha.tipoTemporada}}">{{fecha.mes}} - {{fecha.dia}}
-			                    	</div>
+			                    	<a href="" ng-click="getPreciosPax(nroAdulto,nroMenor,fecha.preciosPax)">
+				                    	<div class="squad-fechas-active" data-toggle="tooltip" data-placement="top" title="Precio: ${{fecha.precioTemporada}} - Temporada: {{fecha.tipoTemporada}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{fecha.mes}} - {{fecha.dia}}
+				                    	</div>
+			                    	</a>
 			                    </div>
 
 			                    <div ng-if="fecha.condicion == 'Reservado'">
@@ -199,6 +228,23 @@
 			                    </div>
 
 	                        </div>
+
+	                        <div class="col-lg-12">
+					        	<div class="alert alert-success col-lg-12" id="alertasFechas" role="alert">
+					        		<div class="col-lg-12">
+					        			<div class="col-lg-2 col-sm-2" id="cartelAlerta">
+					        				<strong>Ver Tarifas</strong>
+					        			</div>
+					        			
+					        			<div class="col-lg-10 col-sm-10">
+					        				<ul class="pagination" id="preciosPax" ng-repeat="pre in preciosP">
+							        			<li><a href="">$ {{pre.fechasp}}</a></li>
+							        		</ul>
+					        			</div>
+					        		</div>
+
+					        	</div>
+					        </div>
 
 				        </div>
 			          </div>
