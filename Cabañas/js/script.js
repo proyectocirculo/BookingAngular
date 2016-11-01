@@ -12,7 +12,7 @@
             var deferred = $q.defer();
 
             if(cabanas == null){
-                $http.get('https://proyectocirculo.github.io/BookingAngular/Cabañas/js/jsoncabaniasdos.json')
+                $http.get('https://raw.githubusercontent.com/proyectocirculo/BookingAngular/master/Caba%25C3%25B1as/js/jsoncabaniasdos.json')
                 .then(function(result){
                     deferred.resolve(result);
                 },
