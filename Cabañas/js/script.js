@@ -12,7 +12,11 @@
             var deferred = $q.defer();
 
             if(cabanas == null){
+<<<<<<< HEAD
                 $http.get('http://colinadelmanzano.com.ar/pruebas/todos/jsoncabaniasdos')
+=======
+                $http.get('https://raw.githubusercontent.com/proyectocirculo/BookingAngular/master/Caba%25C3%25B1as/js/jsoncabaniasdos.json')
+>>>>>>> 0dd0072696154ed3f0e2b3d20f4fe2fff6b91b14
                 .then(function(result){
                     deferred.resolve(result);
                 },
@@ -63,7 +67,12 @@
 
         Cabanas.traerCabanas().then(function(result){
 
+<<<<<<< HEAD
             
+=======
+            $scope.cabanas = result.data;
+            /*
+>>>>>>> 0dd0072696154ed3f0e2b3d20f4fe2fff6b91b14
             $scope.cabanas = [{"casa":"ElBuho","id":2,"nombre":"El Buho","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales"
                               ,"precio":120,"camas":"1","personas":"8","tamanio":"100m2","img":"2El Buho",
 
@@ -325,6 +334,7 @@
             //var milisegundos=parseInt(15*24*60*60*1000);
             //var tiempo = $scope.fechaSal.getTime();
             //$scope.fechaSal.setTime(tiempo+milisegundos);
+            */
             //------
             //var numeroAdulto = parseInt("1");
             $scope.nroAdulto = 2;
