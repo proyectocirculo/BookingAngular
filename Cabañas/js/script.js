@@ -12,11 +12,7 @@
             var deferred = $q.defer();
 
             if(cabanas == null){
-<<<<<<< HEAD
                 $http.get('http://colinadelmanzano.com.ar/pruebas/todos/jsoncabaniasdos')
-=======
-                $http.get('https://raw.githubusercontent.com/proyectocirculo/BookingAngular/master/Caba%25C3%25B1as/js/jsoncabaniasdos.json')
->>>>>>> 0dd0072696154ed3f0e2b3d20f4fe2fff6b91b14
                 .then(function(result){
                     deferred.resolve(result);
                 },
@@ -67,12 +63,7 @@
 
         Cabanas.traerCabanas().then(function(result){
 
-<<<<<<< HEAD
             
-=======
-            $scope.cabanas = result.data;
-            /*
->>>>>>> 0dd0072696154ed3f0e2b3d20f4fe2fff6b91b14
             $scope.cabanas = [{"casa":"ElBuho","id":2,"nombre":"El Buho","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales"
                               ,"precio":120,"camas":"1","personas":"8","tamanio":"100m2","img":"2El Buho",
 
@@ -178,51 +169,43 @@
                               
                             {"casa":"LaPaloma","id":98,"nombre":"La Paloma","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales","precio":500,"camas":"4","personas":"8","tamanio":"","img":"98La Paloma",
                                     
-                            "reservas":[{"fecha":"2016-10-27"},{"fecha":"2016-11-02"},{"fecha":"2016-11-03"},
-                                        {"fecha":"2016-11-04"},{"fecha":"2016-11-06"},{"fecha":"2016-11-09"}],
+                            "reservas":[{"fecha":"2016-11-06"},{"fecha":"2016-11-09"},{"fecha":"2016-11-10"}],
                             //array temporada    
                             "temporada":[
-                                        {"fecha":"2016-10-31",
-                                        "precioTemporada":200,
-                                        "tipoTemporada":"Baja",
-                                        "preciosPax":[{"2pax":"99,99"},{"3pax":"56,12"},
-                                                      {"4pax":"89,41"},{"5pax":"544,89"}]
-                                        },
-                                        {"fecha":"2016-11-02",
-                                        "precioTemporada":200,
-                                        "tipoTemporada":"Baja",
-                                        "preciosPax":[{"2pax":"8,912"},{"3pax":"8,913"},
-                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
-                                        },
-                                        {"fecha":"2016-11-06",
-                                        "precioTemporada":200,
-                                        "tipoTemporada":"Baja",
-                                        "preciosPax":[{"2pax":"8,912"},{"3pax":"8,913"},
-                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
-                                        },
-                                        {"fecha":"2016-11-07",
-                                        "precioTemporada":200,
-                                        "tipoTemporada":"Baja",
-                                        "preciosPax":[{"2pax":"8,912"},{"3pax":"8,913"},
-                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
-                                        },
                                         {"fecha":"2016-11-09",
                                         "precioTemporada":200,
                                         "tipoTemporada":"Baja",
                                         "preciosPax":[{"2pax":"6,666"},{"3pax":"8,913"},
-                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                                      {"4pax":"9,913"},{"5pax":"8,913"}]
                                         },
                                         {"fecha":"2016-11-10",
                                         "precioTemporada":200,
                                         "tipoTemporada":"Baja",
+
                                         "preciosPax":[{"2pax":"6,666"},{"3pax":"8,913"},
                                                       {"4pax":"9,913"},{"3pax":"8,913"}]
+
                                         },
                                         {"fecha":"2016-11-11",
-                                        "precioTemporada":111,
+                                        "precioTemporada":156,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"6,666"},{"3pax":"8,913"},
+                                                      {"4pax":"1,474"},{"5pax":"9,456"},
+                                                      {"6pax":"3,857"}]
+                                        },
+                                        {"fecha":"2016-11-12",
+                                        "precioTemporada":156,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"1,234"},{"3pax":"8,913"},
+                                                      {"4pax":"1,474"},{"5pax":"9,456"},
+                                                      {"6pax":"3,857"}]
+                                        },
+                                        {"fecha":"2016-11-13",
+                                        "precioTemporada":89,
                                         "tipoTemporada":"Baja",
                                         "preciosPax":[{"2pax":"3,333"},{"3pax":"8,913"},
-                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                                      {"4pax":"9,913"},{"5pax":"8,913"},
+                                                      {"6pax":"1,111"}]
                                         }],   
 
                             "servicios":[{"srv":"iconos-_market.jpg"}]},
@@ -334,11 +317,11 @@
             //var milisegundos=parseInt(15*24*60*60*1000);
             //var tiempo = $scope.fechaSal.getTime();
             //$scope.fechaSal.setTime(tiempo+milisegundos);
-            */
             //------
             //var numeroAdulto = parseInt("1");
             $scope.nroAdulto = 2;
             $scope.nroMenor = 0;
+            $scope.cartelTarifas = "Precione las fechas para ver los precios."
             //------
 
             $scope.calcularReservas($scope.fechaIni, $scope.fechaSal,$scope.cabanas);
@@ -488,6 +471,8 @@
         $scope.getPreciosPax = function(nroAdulto,nroMenor,preciosPax,mes,dia) {
 
             $scope.tituloPerMas = "";
+            $scope.cartelTarifas = "";
+            $scope.verTarifas = "Ver Tarifas para";
             var totalPersonas;
             if(nroMenor == null){
                 totalPersonas = nroAdulto
@@ -506,7 +491,7 @@
 
             }else{
 
-                if(totalPersonas > 5){
+                if(totalPersonas > 6){
                     $scope.tituloPerMas = "No hay esa cantidad de personas para esa cabaña.";
                 }
 
@@ -561,6 +546,12 @@
                 $scope.alertaUno = "Debes ingresar una fecha mayor o igual a hoy";
                 $scope.myValue = false;
             }else{
+
+                $scope.cartelTarifas = "Precione las fechas para ver los precios.";
+                $scope.verTarifas = "";
+                $scope.tituloMes = "";
+                $scope.tituloDia = "";
+                $scope.preciosP = "";
 
                 var cabanaConReserva = [];
                 var cabanaSinReserva = [];
