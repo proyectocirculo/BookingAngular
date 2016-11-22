@@ -33,10 +33,6 @@
 	background-color: #258e23;
 }
 
-#sinReserva{
-	
-}
-
 .cartel{
 	display: none;
 }
@@ -166,8 +162,12 @@
 	background-color: aquamarine;
 }
 
+#disponibles{
+    background-color: #249c05;
+}
 
-
-
+#btnConsultar{
+    margin-top: 3%;
+}
 
 

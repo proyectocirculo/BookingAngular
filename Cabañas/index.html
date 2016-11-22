@@ -62,7 +62,7 @@
 
 	    		<!-- primer cabaña -->
 				<div class="panel panel-default">
-				    <div class="panel-heading" role="tab" id="{{cabanas[0].cabanaConreserva}}">
+				    <div class="panel-heading" role="tab" id="{{cabanas[0].cabanaConreserva}}" ng-click="resetAllElemet()">
 				      <h4 class="panel-title">
 				        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{cabanas[0].casa}}" aria-expanded="true" id="{{cabanas[0].cabanaConreserva}}">
 				          {{cabanas[0].nombre}} - {{cabanas[0].estado}}
@@ -88,13 +88,26 @@
 		                                </div>
 		                            </div>
 		                        </div>
-		                        <a href="#">
-		                            <div class="panel-footer">
+
+		                        <!--quiere decir que tiene todas fecha estan libres-->
+		                        <a href="" ng-click="sendPost(fechaIni, fechaSal, nroAdulto, nroMenor, cabanas[0].reservas,cabanas[0].temporada)">
+		                            <div class="panel-footer reservar">
 		                                <span class="pull-left">RESERVAR</span>
 		                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 		                                <div class="clearfix"></div>
 		                            </div>
 		                        </a>
+		                        <!--  -->
+		                        <!--quiere decir que tiene todas fecha estan libres-->
+		                        <a href="#">
+		                            <div class="panel-footer" id="btnConsultar">
+		                                <span class="pull-left">CONSULTAR</span>
+		                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+		                                <div class="clearfix"></div>
+		                            </div>
+		                        </a>
+		                        <!--  -->
+
 		                    </div>
 		                </div>
 
@@ -160,8 +173,9 @@
 				</div>
 				<!-- primer cabaña -->
 
+				<!-- segunda cabaña -->
 				<div class="panel panel-default">
-				    <div class="panel-heading" role="tab" id="{{cabanas[1].cabanaConreserva}}">
+				    <div class="panel-heading" role="tab" id="{{cabanas[1].cabanaConreserva}}" ng-click="resetAllElemet()">
 				      <h4 class="panel-title">
 				        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{cabanas[1].casa}}" aria-expanded="true" id="{{cabanas[1].cabanaConreserva}}">
 				          {{cabanas[1].nombre}} - {{cabanas[1].estado}}
@@ -187,13 +201,26 @@
 		                                </div>
 		                            </div>
 		                        </div>
-		                        <a href="#">
-		                            <div class="panel-footer">
+		                        
+		                        <!--quiere decir que tiene todas fecha estan libres-->
+		                        <a href="" ng-click="sendPost(fechaIni, fechaSal, nroAdulto, nroMenor, cabanas[1].reservas,cabanas[1].temporada)">
+		                            <div class="panel-footer reservar">
 		                                <span class="pull-left">RESERVAR</span>
 		                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 		                                <div class="clearfix"></div>
 		                            </div>
 		                        </a>
+		                        <!--  -->
+		                        <!--quiere decir que tiene todas fecha estan libres-->
+		                        <a href="#">
+		                            <div class="panel-footer" id="btnConsultar">
+		                                <span class="pull-left">CONSULTAR</span>
+		                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+		                                <div class="clearfix"></div>
+		                            </div>
+		                        </a>
+		                        <!--  -->
+
 		                    </div>
 		                </div>
 
@@ -256,7 +283,7 @@
 
 				<!-- tercer cabaña -->
 				<div class="panel panel-default">
-				    <div class="panel-heading" role="tab" id="{{cabanas[2].cabanaConreserva}}">
+				    <div class="panel-heading" role="tab" id="{{cabanas[2].cabanaConreserva}}" ng-click="resetAllElemet()">
 				      <h4 class="panel-title">
 				        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{cabanas[2].casa}}" aria-expanded="true" id="{{cabanas[2].cabanaConreserva}}">
 				          {{cabanas[2].nombre}} - {{cabanas[2].estado}}
@@ -282,13 +309,26 @@
 		                                </div>
 		                            </div>
 		                        </div>
-		                        <a href="#">
-		                            <div class="panel-footer">
+		                        
+		                        <!--quiere decir que tiene todas fecha estan libres-->
+		                        <a href="" ng-click="sendPost(fechaIni, fechaSal, nroAdulto, nroMenor, cabanas[2].reservas,cabanas[2].temporada)">
+		                            <div class="panel-footer reservar">
 		                                <span class="pull-left">RESERVAR</span>
 		                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 		                                <div class="clearfix"></div>
 		                            </div>
 		                        </a>
+		                        <!--  -->
+		                        <!--quiere decir que tiene todas fecha estan libres-->
+		                        <a href="#">
+		                            <div class="panel-footer" id="btnConsultar">
+		                                <span class="pull-left">CONSULTAR</span>
+		                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+		                                <div class="clearfix"></div>
+		                            </div>
+		                        </a>
+		                        <!--  -->
+
 		                    </div>
 		                </div>
 
@@ -351,8 +391,9 @@
 				</div>
 				<!-- tercer cabaña -->
 
+				<!-- cuarta cabaña -->
 				<div class="panel panel-default">
-				    <div class="panel-heading" role="tab" id="{{cabanas[3].cabanaConreserva}}">
+				    <div class="panel-heading" role="tab" id="{{cabanas[3].cabanaConreserva}}" ng-click="resetAllElemet()">
 				      <h4 class="panel-title">
 				        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{cabanas[3].casa}}" aria-expanded="true" id="{{cabanas[3].cabanaConreserva}}">
 				          {{cabanas[3].nombre}} - {{cabanas[3].estado}}
@@ -378,13 +419,26 @@
 		                                </div>
 		                            </div>
 		                        </div>
-		                        <a href="#">
-		                            <div class="panel-footer">
+		                        
+		                        <!--quiere decir que tiene todas fecha estan libres-->
+		                        <a href="" ng-click="sendPost(fechaIni, fechaSal, nroAdulto, nroMenor, cabanas[3].reservas,cabanas[3].temporada)">
+		                            <div class="panel-footer reservar">
 		                                <span class="pull-left">RESERVAR</span>
 		                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 		                                <div class="clearfix"></div>
 		                            </div>
 		                        </a>
+		                        <!--  -->
+		                        <!--quiere decir que tiene todas fecha estan libres-->
+		                        <a href="#">
+		                            <div class="panel-footer" id="btnConsultar">
+		                                <span class="pull-left">CONSULTAR</span>
+		                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+		                                <div class="clearfix"></div>
+		                            </div>
+		                        </a>
+		                        <!--  -->
+
 		                    </div>
 		                </div>
 
@@ -447,7 +501,7 @@
 
 				<!-- quinta cabaña -->
 				<div class="panel panel-default">
-				    <div class="panel-heading" role="tab" id="{{cabanas[4].cabanaConreserva}}">
+				    <div class="panel-heading" role="tab" id="{{cabanas[4].cabanaConreserva}}" ng-click="resetAllElemet()">
 				      <h4 class="panel-title">
 				        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{cabanas[4].casa}}" aria-expanded="true" id="{{cabanas[4].cabanaConreserva}}">
 				          {{cabanas[4].nombre}} - {{cabanas[4].estado}}
@@ -473,13 +527,26 @@
 		                                </div>
 		                            </div>
 		                        </div>
-		                        <a href="#">
-		                            <div class="panel-footer">
+		                        
+		                        <!--quiere decir que tiene todas fecha estan libres-->
+		                        <a href="" ng-click="sendPost(fechaIni, fechaSal, nroAdulto, nroMenor, cabanas[4].reservas,cabanas[4].temporada)">
+		                            <div class="panel-footer reservar">
 		                                <span class="pull-left">RESERVAR</span>
 		                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
 		                                <div class="clearfix"></div>
 		                            </div>
 		                        </a>
+		                        <!--  -->
+		                        <!--quiere decir que tiene todas fecha estan libres-->
+		                        <a href="#">
+		                            <div class="panel-footer" id="btnConsultar">
+		                                <span class="pull-left">CONSULTAR</span>
+		                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+		                                <div class="clearfix"></div>
+		                            </div>
+		                        </a>
+		                        <!--  -->
+
 		                    </div>
 		                </div>
 
