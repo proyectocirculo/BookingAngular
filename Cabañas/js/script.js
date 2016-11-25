@@ -170,7 +170,13 @@
                                         {"fecha":"2016-12-08",
                                         "precioTemporada":200,
                                         "tipoTemporada":"Baja",
-                                        "preciosPax":[{"2pax":"233,89"},{"3pax":"8,913"},
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-12-09",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"3,977"},{"3pax":"8,913"},
                                                       {"4pax":"9,913"},{"4pax":"566,67"}]
                                         }],            
 
@@ -182,30 +188,6 @@
                                         {"fecha":"2016-10-06"},{"fecha":"2016-11-07"}],
                             //array temporada    
                             "temporada":[
-                                        {"fecha":"2016-11-20",
-                                        "precioTemporada":122,
-                                        "tipoTemporada":"Alta",
-                                        "preciosPax":[{"2pax":"127,23"},{"3pax":"422,23"},
-                                                      {"4pax":"9,913"},{"5pax":"8,913"}]
-                                        },
-                                        {"fecha":"2016-11-21",
-                                        "precioTemporada":110,
-                                        "tipoTemporada":"Baja",
-                                        "preciosPax":[{"2pax":"904,23"},{"3pax":"8,913"},
-                                                      {"4pax":"789.56"}]
-                                        },
-                                        {"fecha":"2016-11-22",
-                                        "precioTemporada":200,
-                                        "tipoTemporada":"Baja",
-                                        "preciosPax":[{"2pax":"8,912"},{"3pax":"8,913"},
-                                                      {"4pax":"9,913"},{"5pax":"8,913"}]
-                                        },
-                                        {"fecha":"2016-11-23",
-                                        "precioTemporada":190,
-                                        "tipoTemporada":"Baja",
-                                        "preciosPax":[{"2pax":"123,67"},{"3pax":"8,913"},
-                                                      {"4pax":"9,913"}]
-                                        },
                                         {"fecha":"2016-11-24",
                                         "precioTemporada":200,
                                         "tipoTemporada":"Baja",
@@ -281,6 +263,24 @@
                                         {"fecha":"2016-12-06",
                                         "precioTemporada":200,
                                         "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-12-07",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-12-09",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-12-10",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
                                         "preciosPax":[{"2pax":"233,89"},{"3pax":"8,913"},
                                                       {"4pax":"9,913"},{"4pax":"566,67"}]
                                         }],            
@@ -293,41 +293,102 @@
                                         {"fecha":"2016-11-06"}],
                             //array temporada    
                             "temporada":[
-                                        {"fecha":"2016-11-09",
+                                        {"fecha":"2016-11-24",
                                         "precioTemporada":200,
                                         "tipoTemporada":"Baja",
-                                        "preciosPax":[{"2pax":"6,666"},{"3pax":"8,913"},
-                                                      {"4pax":"9,913"},{"5pax":"8,913"}]
-                                        },
-                                        {"fecha":"2016-11-10",
-                                        "precioTemporada":200,
-                                        "tipoTemporada":"Baja",
-
-                                        "preciosPax":[{"2pax":"6,666"},{"3pax":"8,913"},
+                                        "preciosPax":[{"2pax":"8,912"},{"3pax":"8,913"},
                                                       {"4pax":"9,913"},{"3pax":"8,913"}]
-
                                         },
-                                        {"fecha":"2016-11-11",
-                                        "precioTemporada":156,
+                                        {"fecha":"2016-11-25",
+                                        "precioTemporada":200,
                                         "tipoTemporada":"Baja",
-                                        "preciosPax":[{"2pax":"6,666"},{"3pax":"8,913"},
-                                                      {"4pax":"1,474"},{"5pax":"9,456"},
-                                                      {"6pax":"3,857"}]
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
                                         },
-                                        {"fecha":"2016-11-12",
-                                        "precioTemporada":156,
+                                        {"fecha":"2016-11-26",
+                                        "precioTemporada":200,
                                         "tipoTemporada":"Baja",
-                                        "preciosPax":[{"2pax":"1,234"},{"3pax":"8,913"},
-                                                      {"4pax":"1,474"},{"5pax":"9,456"},
-                                                      {"6pax":"3,857"}]
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
                                         },
-                                        {"fecha":"2016-11-13",
-                                        "precioTemporada":89,
+                                        {"fecha":"2016-11-27",
+                                        "precioTemporada":200,
                                         "tipoTemporada":"Baja",
-                                        "preciosPax":[{"2pax":"3,333"},{"3pax":"8,913"},
-                                                      {"4pax":"9,913"},{"5pax":"8,913"},
-                                                      {"6pax":"1,111"}]
-                                        }],   
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-11-28",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-11-29",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-11-30",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-12-01",
+                                        "precioTemporada":97,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-12-02",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-12-03",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-12-04",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-12-05",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-12-06",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-12-07",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-12-08",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-12-09",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"233,89"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"4pax":"566,67"}]
+                                        }],            
 
                             "servicios":[{"srv":"iconos-_market.jpg"}]},
                               
@@ -337,54 +398,103 @@
                                         {"fecha":"2016-10-29"},{"fecha":"2016-11-01"},{"fecha":"2016-11-04"}],
                             //array temporada    
                             "temporada":[
-                                        {"fecha":"2016-11-04",
-                                        "precioTemporada":122,
-                                        "tipoTemporada":"Alta",
-                                        "preciosPax":[{"2pax":"127,23"},{"3pax":"422,23"},
-                                                      {"4pax":"9,913"},{"5pax":"8,913"}]
-                                        },
-                                        {"fecha":"2016-11-06",
-                                        "precioTemporada":110,
-                                        "tipoTemporada":"Baja",
-                                        "preciosPax":[{"2pax":"904,23"},{"3pax":"8,913"},
-                                                      {"4pax":"789.56"}]
-                                        },
-                                        {"fecha":"2016-11-07",
-                                        "precioTemporada":200,
-                                        "tipoTemporada":"Baja",
-                                        "preciosPax":[{"2pax":"8,912"},{"3pax":"8,913"},
-                                                      {"4pax":"9,913"},{"5pax":"8,913"}]
-                                        },
-                                        {"fecha":"2016-11-08",
-                                        "precioTemporada":190,
-                                        "tipoTemporada":"Baja",
-                                        "preciosPax":[{"2pax":"123,67"},{"3pax":"8,913"},
-                                                      {"4pax":"9,913"}]
-                                        },
-                                        {"fecha":"2016-11-09",
+                                        {"fecha":"2016-11-24",
                                         "precioTemporada":200,
                                         "tipoTemporada":"Baja",
                                         "preciosPax":[{"2pax":"8,912"},{"3pax":"8,913"},
                                                       {"4pax":"9,913"},{"3pax":"8,913"}]
                                         },
-                                        {"fecha":"2016-11-10",
+                                        {"fecha":"2016-11-25",
                                         "precioTemporada":200,
                                         "tipoTemporada":"Baja",
-                                        "preciosPax":[{"2pax":"10,213"},{"3pax":"8,913"},
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
                                                       {"4pax":"9,913"},{"3pax":"8,913"}]
                                         },
-                                        {"fecha":"2016-11-21",
+                                        {"fecha":"2016-11-26",
                                         "precioTemporada":200,
                                         "tipoTemporada":"Baja",
-                                        "preciosPax":[{"2pax":"10,213"},{"3pax":"8,913"},
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
                                                       {"4pax":"9,913"},{"3pax":"8,913"}]
                                         },
-                                        {"fecha":"2016-11-22",
+                                        {"fecha":"2016-11-27",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-11-28",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-11-29",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-11-30",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-12-01",
+                                        "precioTemporada":97,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-12-02",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-12-03",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-12-04",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-12-05",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-12-06",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-12-07",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-12-08",
+                                        "precioTemporada":200,
+                                        "tipoTemporada":"Baja",
+                                        "preciosPax":[{"2pax":"9,999"},{"3pax":"8,913"},
+                                                      {"4pax":"9,913"},{"3pax":"8,913"}]
+                                        },
+                                        {"fecha":"2016-12-10",
                                         "precioTemporada":200,
                                         "tipoTemporada":"Baja",
                                         "preciosPax":[{"2pax":"233,89"},{"3pax":"8,913"},
                                                       {"4pax":"9,913"},{"4pax":"566,67"}]
-                                        }],                                      
+                                        }],            
+
                                         "servicios":[{"srv":"iconos-_wifi.jpg"},{"srv":"iconos-_auto.jpg"},{"srv":"iconos-_grill.jpg"}]},
                               
                               {"casa":"CasaReal","id":106,"nombre":"Casa Real","descripcion":"200m2, 2 cama matrimoniales, 2 camas individuales","precio":760,"camas":"4","personas":"8","tamanio":"200m2","img":"106Casa Real",

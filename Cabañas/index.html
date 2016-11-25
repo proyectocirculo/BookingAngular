@@ -14,7 +14,7 @@
 
     <div class="container">
     	<div class="row" id="mainCtrl" ng-controller="MainController">
-
+    		
     		<div class="container form-group col-lg-3">
 				  	<h4>Seleccione las fechas:</h4>
 
@@ -90,13 +90,24 @@
 		                        </div>
 
 		                        <!--quiere decir que tiene todas fecha estan libres-->
-		                        <a href="" ng-click="sendPost(fechaIni, fechaSal, nroAdulto, nroMenor, cabanas[0].reservas,cabanas[0].temporada)">
-		                            <div class="panel-footer reservar">
-		                                <span class="pull-left">RESERVAR</span>
-		                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-		                                <div class="clearfix"></div>
-		                            </div>
-		                        </a>
+		                        <div ng-if="cabanas[0].cabanaConreserva == 'sinReserva'">
+			                        <a href="" ng-click="sendPost(fechaIni, fechaSal, nroAdulto, nroMenor, cabanas[0].reservas,cabanas[0].temporada)">
+			                            <div class="panel-footer reservar">
+			                                <span class="pull-left">RESERVAR</span>
+			                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+			                                <div class="clearfix"></div>
+			                            </div>
+			                        </a>
+			                    </div>
+			                    <div ng-if="cabanas[0].cabanaConreserva == 'disponibles'">
+			                        <a href="">
+			                            <div class="panel-footer reservar">
+			                                <span class="pull-left">RESERVAR</span>
+			                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+			                                <div class="clearfix"></div>
+			                            </div>
+			                        </a>
+		                        </div>
 		                        <!--  -->
 		                        <!--quiere decir que tiene todas fecha estan libres-->
 		                        <a href="#">
@@ -203,13 +214,24 @@
 		                        </div>
 		                        
 		                        <!--quiere decir que tiene todas fecha estan libres-->
-		                        <a href="" ng-click="sendPost(fechaIni, fechaSal, nroAdulto, nroMenor, cabanas[1].reservas,cabanas[1].temporada)">
-		                            <div class="panel-footer reservar">
-		                                <span class="pull-left">RESERVAR</span>
-		                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-		                                <div class="clearfix"></div>
-		                            </div>
-		                        </a>
+		                        <div ng-if="cabanas[1].cabanaConreserva == 'sinReserva'">
+			                        <a href="" ng-click="sendPost(fechaIni, fechaSal, nroAdulto, nroMenor, cabanas[0].reservas,cabanas[0].temporada)">
+			                            <div class="panel-footer reservar">
+			                                <span class="pull-left">RESERVAR</span>
+			                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+			                                <div class="clearfix"></div>
+			                            </div>
+			                        </a>
+			                    </div>
+			                    <div ng-if="cabanas[1].cabanaConreserva == 'disponibles'">
+			                        <a href="">
+			                            <div class="panel-footer reservar">
+			                                <span class="pull-left">RESERVAR</span>
+			                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+			                                <div class="clearfix"></div>
+			                            </div>
+			                        </a>
+		                        </div>
 		                        <!--  -->
 		                        <!--quiere decir que tiene todas fecha estan libres-->
 		                        <a href="#">
@@ -311,13 +333,24 @@
 		                        </div>
 		                        
 		                        <!--quiere decir que tiene todas fecha estan libres-->
-		                        <a href="" ng-click="sendPost(fechaIni, fechaSal, nroAdulto, nroMenor, cabanas[2].reservas,cabanas[2].temporada)">
-		                            <div class="panel-footer reservar">
-		                                <span class="pull-left">RESERVAR</span>
-		                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-		                                <div class="clearfix"></div>
-		                            </div>
-		                        </a>
+		                        <div ng-if="cabanas[2].cabanaConreserva == 'sinReserva'">
+			                        <a href="" ng-click="sendPost(fechaIni, fechaSal, nroAdulto, nroMenor, cabanas[0].reservas,cabanas[0].temporada)">
+			                            <div class="panel-footer reservar">
+			                                <span class="pull-left">RESERVAR</span>
+			                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+			                                <div class="clearfix"></div>
+			                            </div>
+			                        </a>
+			                    </div>
+			                    <div ng-if="cabanas[2].cabanaConreserva == 'disponibles'">
+			                        <a href="">
+			                            <div class="panel-footer reservar">
+			                                <span class="pull-left">RESERVAR</span>
+			                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+			                                <div class="clearfix"></div>
+			                            </div>
+			                        </a>
+		                        </div>
 		                        <!--  -->
 		                        <!--quiere decir que tiene todas fecha estan libres-->
 		                        <a href="#">
@@ -421,13 +454,24 @@
 		                        </div>
 		                        
 		                        <!--quiere decir que tiene todas fecha estan libres-->
-		                        <a href="" ng-click="sendPost(fechaIni, fechaSal, nroAdulto, nroMenor, cabanas[3].reservas,cabanas[3].temporada)">
-		                            <div class="panel-footer reservar">
-		                                <span class="pull-left">RESERVAR</span>
-		                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-		                                <div class="clearfix"></div>
-		                            </div>
-		                        </a>
+		                        <div ng-if="cabanas[3].cabanaConreserva == 'sinReserva'">
+			                        <a href="" ng-click="sendPost(fechaIni, fechaSal, nroAdulto, nroMenor, cabanas[0].reservas,cabanas[0].temporada)">
+			                            <div class="panel-footer reservar">
+			                                <span class="pull-left">RESERVAR</span>
+			                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+			                                <div class="clearfix"></div>
+			                            </div>
+			                        </a>
+			                    </div>
+			                    <div ng-if="cabanas[3].cabanaConreserva == 'disponibles'">
+			                        <a href="">
+			                            <div class="panel-footer reservar">
+			                                <span class="pull-left">RESERVAR</span>
+			                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+			                                <div class="clearfix"></div>
+			                            </div>
+			                        </a>
+		                        </div>
 		                        <!--  -->
 		                        <!--quiere decir que tiene todas fecha estan libres-->
 		                        <a href="#">
@@ -529,13 +573,24 @@
 		                        </div>
 		                        
 		                        <!--quiere decir que tiene todas fecha estan libres-->
-		                        <a href="" ng-click="sendPost(fechaIni, fechaSal, nroAdulto, nroMenor, cabanas[4].reservas,cabanas[4].temporada)">
-		                            <div class="panel-footer reservar">
-		                                <span class="pull-left">RESERVAR</span>
-		                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-		                                <div class="clearfix"></div>
-		                            </div>
-		                        </a>
+		                        <div ng-if="cabanas[4].cabanaConreserva == 'sinReserva'">
+			                        <a href="" ng-click="sendPost(fechaIni, fechaSal, nroAdulto, nroMenor, cabanas[0].reservas,cabanas[0].temporada)">
+			                            <div class="panel-footer reservar">
+			                                <span class="pull-left">RESERVAR</span>
+			                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+			                                <div class="clearfix"></div>
+			                            </div>
+			                        </a>
+			                    </div>
+			                    <div ng-if="cabanas[4].cabanaConreserva == 'disponibles'">
+			                        <a href="">
+			                            <div class="panel-footer reservar">
+			                                <span class="pull-left">RESERVAR</span>
+			                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+			                                <div class="clearfix"></div>
+			                            </div>
+			                        </a>
+		                        </div>
 		                        <!--  -->
 		                        <!--quiere decir que tiene todas fecha estan libres-->
 		                        <a href="#">
