@@ -38,6 +38,11 @@
 					  <input type="number" value="1" ng-model="nroMenor" class="form-control" min="0" max="4" step="1">
 					</div>
 
+					<div class="col-lg-12 desa">
+					  <span>Incluir Desayuno</span>
+					  <input type="checkbox" ng-model="desayuno">
+					</div>
+
 					<div ng-hide="myValue" id="diaAtrasado" class="alert alert-danger alert col-lg-12">
 			            <span ng-bind="alertaUno"></span>
 			        </div>
@@ -137,7 +142,7 @@
 				              	
 			                    <div ng-if="fecha.condicion == 'Libre'">
 			                    	<!-- Calcula el precio de las cantidad de personas -->
-			                    	<a href="" ng-click="getPreciosPax(nroAdulto,nroMenor,fecha.preciosPax,fecha.mes,fecha.dia)">
+			                    	<a href="" ng-click="getPreciosPax(nroAdulto,nroMenor,fecha.preciosPax,fecha.mes,fecha.dia, desayuno)">
 				                    	<div class="squad-fechas-active" data-toggle="tooltip" data-placement="top" title="Precio: ${{fecha.precioTemporada}} - Temporada: {{fecha.tipoTemporada}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{fecha.mes}} - {{fecha.dia}}
 				                    	</div>
 			                    	</a>
