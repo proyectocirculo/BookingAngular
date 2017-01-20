@@ -40,7 +40,7 @@
 
 					<div class="col-lg-12 desa">
 					  <span>Incluir Desayuno</span>
-					  <input type="checkbox" ng-model="desayuno">
+					  <input type="checkbox" ng-model="desayuno" ng-click="resetAllElemet()">
 					</div>
 
 					<div ng-hide="myValue" id="diaAtrasado" class="alert alert-danger alert col-lg-12">
@@ -52,7 +52,7 @@
 			        </div>
 
 					<div class="col-lg-6">
-					  <button class="btn btn-primary" ng-click="calcularReservas(fechaIni,fechaSal,cabanas)" id="consulta">Consultar Reservas</button>
+					  <button class="btn btn-primary" ng-click="calcularReservas(fechaIni,fechaSal,cabanas,desayuno)" id="consulta">Consultar Reservas</button>
 					</div>
 
 					<div class="alert alert-success alert-dismissable col-lg-12" id="{{mostrar}}">
@@ -142,7 +142,7 @@
 				              	
 			                    <div ng-if="fecha.condicion == 'Libre'">
 			                    	<!-- Calcula el precio de las cantidad de personas -->
-			                    	<a href="" ng-click="getPreciosPax(nroAdulto,nroMenor,fecha.preciosPax,fecha.mes,fecha.dia, desayuno)">
+			                    	<a href="" ng-click="getPreciosPax(nroAdulto,nroMenor,fecha.preciosPax,fecha.mes,fecha.dia,desayuno, fecha.preciosDesa)">
 				                    	<div class="squad-fechas-active" data-toggle="tooltip" data-placement="top" title="Precio: ${{fecha.precioTemporada}} - Temporada: {{fecha.tipoTemporada}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{fecha.mes}} - {{fecha.dia}}
 				                    	</div>
 			                    	</a>

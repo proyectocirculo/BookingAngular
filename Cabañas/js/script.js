@@ -113,73 +113,47 @@
                             "temporada": [
             
             {
-                "fecha": "2017-01-17",
+                "fecha": "2017-01-20",
                 "precioTemporada": "1000",
+                "precioDesayuno": "1111",
                 "tipoTemporada": "Media",
-                "preciosPax": [
-                    {
-                        "2pax": "1000"
-                    },
-                    {
-                        "3pax": "2000"
-                    },
-                    {
-                        "4pax": "3000"
-                    },
-                    {
-                        "5pax": "4000"
-                    }
-                ]
+                "preciosPax": [{"2pax": "1000"},{"3pax": "2000"},
+                               {"4pax": "3000"},{"5pax": "4000"}],
+                "preciosDesa": [{"2pax": "1111"},{"3pax": "2222"},
+                                {"4pax": "3333"},{"5pax": "4444"}],
+                "test":"123456"                
+
             },
             {
-                "fecha": "2017-01-18",
-                "precioTemporada": "1569",
+                "fecha": "2017-01-21",
+                "precioTemporada": "3000",
+                "precioDesayuno": "4444",
                 "tipoTemporada": "Media",
-                "preciosPax": [
-                    {
-                        "2pax": "3000"
-                    },
-                    {
-                        "3pax": "4000"
-                    },
-                    {
-                        "4pax": "5000"
-                    },
-                    {
-                        "5pax": "6000"
-                    },
-                    {
-                        "6pax": "7000"
-                    }
-                ]
+                "preciosPax": [{"2pax": "3000"},{"3pax": "4000"},
+                               {"4pax": "5000"},{"5pax": "6000"}],
+
+                "preciosDesa": [{"2pax": "4444"},{"3pax": "5555"},
+                                {"4pax": "6666"},{"5pax": "7777"}]
             },
             
             {
-                "fecha": "2017-12-20",
+                "fecha": "2017-01-22",
                 "precioTemporada": "1736",
+                "precioDesayuno": "2000",
                 "tipoTemporada": "Media",
-                "preciosPax": [
-                    {
-                        "2pax": "1736"
-                    },
-                    {
-                        "3pax": "2096"
-                    }
-                ]
+                "preciosPax": [{"2pax": "1736"},{"3pax": "2096"}],
+                "preciosDesa": [{"2pax": "2000"},{"3pax": "3000"}]
             },
+
             {
-                "fecha": "2017-12-23",
+                "fecha": "2017-01-23",
                 "precioTemporada": "1736",
+                "precioDesayuno": "2000",
                 "tipoTemporada": "Media",
-                "preciosPax": [
-                    {
-                        "2pax": "1736"
-                    },
-                    {
-                        "3pax": "2096"
-                    }
-                ]
+                "preciosPax": [{"2pax": "1736"},{"3pax": "2096"}],
+                "preciosDesa": [{"2pax": "2000"},{"3pax": "3000"}]
             }
+
         ],
 
                                     "servicios":[{"srv":"iconos-_pileta.jpg"},{"srv":"iconos-_auto.jpg"}]},
@@ -718,10 +692,12 @@
                             mes: mesEscrito,
                             fecha: fechaPosta,
                             precioTemporada: reservaciones[x].precioTemporada,
+                            precioDesayuno: reservaciones[x].precioDesayuno,
                             condicion: "Libre",
                             tipoCondicion: false,
                             tipoTemporada: reservaciones[x].tipoTemporada,
-                            preciosPax: reservaciones[x].preciosPax
+                            preciosPax: reservaciones[x].preciosPax,
+                            preciosDesa : reservaciones[x].preciosDesa
                             };
 
                         break; 
@@ -742,7 +718,7 @@
         //------------------------------------
 
         //-------------
-        $scope.getPreciosPax = function(nroAdulto,nroMenor,preciosPax,mes,dia, desayuno) {
+        $scope.getPreciosPax = function(nroAdulto,nroMenor,preciosPax,mes,dia,desayuno,preciosDesa) {
 
             $scope.tituloPerMas = "";
             $scope.cartelTarifas = "";
@@ -755,6 +731,11 @@
             }
 
             var arrayPrecios = preciosPax;
+
+            if(desayuno){
+                arrayPrecios = preciosDesa
+            }
+
             var preciosFinal = [];
             $scope.myValor = true;
             $scope.alertaAdulto = "";
@@ -783,46 +764,13 @@
 
                     var precioTest = precioPrevio.substring(0,numeroString);
 
-                    if(desayuno == true){
-                        precioTest = parseInt(precioTest);
-                        //precioTest = precioTest + 100;
-                        //precioTest = precioTest.toString();
-
-                        switch(i){
-                            case 0:
-                                precioTest = precioTest + (2*110);
-                                break;
-
-                            case 1:
-                                precioTest = precioTest + (3*100);
-                                break;
-
-                            case 2:
-                                precioTest = precioTest + (4*90);
-                                break;
-
-                            case 3:
-                                precioTest = precioTest + (5*85);
-                                break;
-
-                            case 4:
-                                precioTest = precioTest + (6*80);
-                                break;                  
-
-                        }
-
-                        precioTest = precioTest.toString();
-
-                    }
-
                     if(totalPersonas == i+nroPax){
                         cper = "verdad";
                     }else{
                         cper = "noverdad"
                     }
                     var a = {
-                            nroPersonas: nroPax+i,   
-                            //fechasp: precioPrevio.substring(0,numeroString),
+                            nroPersonas: nroPax+i,
                             fechasp: precioTest,
                             cantper: cper
                         };
@@ -846,7 +794,7 @@
 
         //------------------------------------
 
-        $scope.calcularReservas = function(fechaInicial, fechaFinal, cabanas) {
+        $scope.calcularReservas = function(fechaInicial, fechaFinal, cabanas, desayuno) {
 
             $scope.myValor = true;
             var cantidadLoop = cabanas.length;
@@ -977,6 +925,17 @@
                             return a.precioTemporada - b.precioTemporada;
                         });
 
+                        var precioCartelito = ReserTest[0].precioTemporada;
+
+                        if(desayuno){
+                            ReserTest.sort(function(c, d){
+                                return c.precioDesayuno - d.precioDesayuno;
+                            });
+                            precioCartelito = ReserTest[0].precioDesayuno;
+                        }
+
+                        
+
                         //------------------------
                         var a = {
                                     casa: cabanas[i].casa,
@@ -984,7 +943,7 @@
                                     primero: "",
                                     nombre: cabanas[i].nombre,
                                     descripcion: cabanas[i].descripcion,
-                                    precio: ReserTest[0].precioTemporada,
+                                    precio: precioCartelito,
                                     camas: cabanas[i].camas,
                                     personas: cabanas[i].personas,
                                     tamanio: cabanas[i].tamanio,
@@ -1003,16 +962,27 @@
                          ||(banderaReservas == false)&&(banderaTemporada == true)&&(banderaNofecha == true)
                             ){
                             //cabañas de fechas disponibles
+                            
                             ReserTest.sort(function(a, b){
-                                return a.precioTemporada - b.precioTemporada;
+                            return a.precioTemporada - b.precioTemporada;
                             });
+
+                            var precioCartelito = ReserTest[0].precioTemporada;
+
+                            if(desayuno){
+                                ReserTest.sort(function(c, d){
+                                    return c.precioDesayuno - d.precioDesayuno;
+                                });
+                                precioCartelito = ReserTest[0].precioDesayuno;
+                            }
+
                             var a = {
                                     casa: cabanas[i].casa,
                                     id: cabanas[i].id,
                                     primero: "",
                                     nombre: cabanas[i].nombre,
                                     descripcion: cabanas[i].descripcion,
-                                    precio: ReserTest[0].precioTemporada,
+                                    precio: precioCartelito,
                                     camas: cabanas[i].camas,
                                     personas: cabanas[i].personas,
                                     tamanio: cabanas[i].tamanio,
@@ -1029,16 +999,27 @@
 
                         if((banderaReservas == false)&&(banderaTemporada == true)&&(banderaNofecha == false)){
                             elEstado = "Cabañas Disponibles";
+                            
                             ReserTest.sort(function(a, b){
-                                return a.precioTemporada - b.precioTemporada;
+                            return a.precioTemporada - b.precioTemporada;
                             });
+
+                            var precioCartelito = ReserTest[0].precioTemporada;
+
+                            if(desayuno){
+                                ReserTest.sort(function(c, d){
+                                    return c.precioDesayuno - d.precioDesayuno;
+                                });
+                                precioCartelito = ReserTest[0].precioDesayuno;
+                            }
+
                             var a = {
                                     casa: cabanas[i].casa,
                                     id: cabanas[i].id,
                                     primero: "",
                                     nombre: cabanas[i].nombre,
                                     descripcion: cabanas[i].descripcion,
-                                    precio: ReserTest[0].precioTemporada,
+                                    precio: precioCartelito,
                                     camas: cabanas[i].camas,
                                     personas: cabanas[i].personas,
                                     tamanio: cabanas[i].tamanio,
