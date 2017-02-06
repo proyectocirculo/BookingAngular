@@ -106,26 +106,25 @@
             $scope.cabanas = [{"casa":"ElBuho","id":2,"nombre":"El Buho","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales"
                               ,"precio":120,"camas":"1","personas":"8","tamanio":"100m2","img":"2El Buho",
 
-                            "reservas":[{"fecha":"2016-12-06"},{"fecha":"2016-12-07"},
-                                        {"fecha":"2016-12-08"},{"fecha":"2016-12-09"},
-                                        {"fecha":"2016-12-14"}],
+                            "reservas":[{"fecha":"2017-02-06"},{"fecha":"2017-02-07"},
+                                        {"fecha":"2017-02-08"},{"fecha":"2016-12-09"},
+                                        {"fecha":"2017-02-13"}],
                             //array temporada    
                             "temporada": [
             
             {
-                "fecha": "2017-01-20",
+                "fecha": "2017-02-09",
                 "precioTemporada": "1000",
                 "precioDesayuno": "1111",
                 "tipoTemporada": "Media",
                 "preciosPax": [{"2pax": "1000"},{"3pax": "2000"},
                                {"4pax": "3000"},{"5pax": "4000"}],
                 "preciosDesa": [{"2pax": "1111"},{"3pax": "2222"},
-                                {"4pax": "3333"},{"5pax": "4444"}],
-                "test":"123456"                
+                                {"4pax": "3333"},{"5pax": "4444"}]                
 
             },
             {
-                "fecha": "2017-01-21",
+                "fecha": "2017-02-10",
                 "precioTemporada": "3000",
                 "precioDesayuno": "4444",
                 "tipoTemporada": "Media",
@@ -137,7 +136,7 @@
             },
             
             {
-                "fecha": "2017-01-22",
+                "fecha": "2017-02-11",
                 "precioTemporada": "1736",
                 "precioDesayuno": "2000",
                 "tipoTemporada": "Media",
@@ -146,7 +145,7 @@
             },
 
             {
-                "fecha": "2017-01-23",
+                "fecha": "2017-02-12",
                 "precioTemporada": "1736",
                 "precioDesayuno": "2000",
                 "tipoTemporada": "Media",
@@ -960,6 +959,7 @@
                         var elEstado = "";
                         if((banderaReservas == true)&&(banderaTemporada == true)&&(banderaNofecha == true)
                          ||(banderaReservas == false)&&(banderaTemporada == true)&&(banderaNofecha == true)
+                         ||(banderaReservas == true)&&(banderaTemporada == true)&&(banderaNofecha == false)
                             ){
                             //cabañas de fechas disponibles
                             
