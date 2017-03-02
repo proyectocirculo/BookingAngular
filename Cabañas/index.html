@@ -30,7 +30,7 @@
 
 					<div class="col-lg-12 fechasIng">
 					  <span class="input-group-addon">Cantidad de Personas (Adultos)</span>
-					  <input type="number" value="1" ng-model="nroAdulto" class="form-control" min="1" max="5" step="1">
+					  <input type="number" value="1" ng-model="nroAdulto" class="form-control" min="1" max="6" step="1">
 					</div>
 
 					<div class="col-lg-12 fechasIng">
@@ -40,7 +40,7 @@
 
 					<div class="col-lg-12 desa">
 					  <span>Incluir Desayuno</span>
-					  <input type="checkbox" ng-model="desayuno" ng-click="resetAllElemet();calcularReservas(fechaIni,fechaSal,cabanas,desayuno);">
+					  <input type="checkbox" ng-model="desayuno" ng-click="resetAllElemet();calcularReservas(fechaIni,fechaSal,cabanas,desayuno,nroAdulto,nroMenor);">
 					</div>
 
 					<div ng-hide="myValue" id="diaAtrasado" class="alert alert-danger alert col-lg-12">
@@ -52,7 +52,7 @@
 			        </div>
 
 					<div class="col-lg-6">
-					  <button class="btn btn-primary" ng-click="calcularReservas(fechaIni,fechaSal,cabanas,desayuno)" id="consulta">Consultar Reservas</button>
+					  <button class="btn btn-primary" ng-click="calcularReservas(fechaIni,fechaSal,cabanas,desayuno,nroAdulto,nroMenor)" id="consulta">Consultar Reservas</button>
 					</div>
 
 					<div class="alert alert-success alert-dismissable col-lg-12" id="{{mostrar}}">
@@ -217,10 +217,10 @@
 		                                </div>
 		                            </div>
 		                        </div>
-		                        
+
 		                        <!--quiere decir que tiene todas fecha estan libres-->
 		                        <div ng-if="cabanas[1].cabanaConreserva == 'sinReserva'">
-			                        <a href="" ng-click="sendPost(fechaIni, fechaSal, nroAdulto, nroMenor, cabanas[0].reservas,cabanas[0].temporada)">
+			                        <a href="" ng-click="sendPost(fechaIni, fechaSal, nroAdulto, nroMenor, cabanas[1].reservas,cabanas[1].temporada)">
 			                            <div class="panel-footer reservar">
 			                                <span class="pull-left">RESERVAR</span>
 			                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -266,7 +266,7 @@
 				              	
 			                    <div ng-if="fecha.condicion == 'Libre'">
 			                    	<!-- Calcula el precio de las cantidad de personas -->
-			                    	<a href="" ng-click="getPreciosPax(nroAdulto,nroMenor,fecha.preciosPax,fecha.mes,fecha.dia)">
+			                    	<a href="" ng-click="getPreciosPax(nroAdulto,nroMenor,fecha.preciosPax,fecha.mes,fecha.dia,desayuno, fecha.preciosDesa)">
 				                    	<div class="squad-fechas-active" data-toggle="tooltip" data-placement="top" title="Precio: ${{fecha.precioTemporada}} - Temporada: {{fecha.tipoTemporada}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{fecha.mes}} - {{fecha.dia}}
 				                    	</div>
 			                    	</a>
@@ -284,7 +284,8 @@
 
 	                        </div>
 
-	                        <div class="alert alert-success col-lg-12" id="alertasFechas" role="alert">
+	                        
+				        	<div class="alert alert-success col-lg-12" id="alertasFechas" role="alert">
 			        			<div class="col-lg-4" id="cartelAlerta">
 			        				<strong>{{cartelTarifas}}</strong>
 			        				<strong>{{verTarifas}} {{tituloMes}} - {{tituloDia}}</strong>
@@ -302,11 +303,16 @@
 				        	</div>
 
 				        </div>
+
+				        
+
 			          </div>
 
 		              </div>
 				
 				</div>
+				<!-- segunda cabaña -->
+
 
 				<!-- tercer cabaña -->
 				<div class="panel panel-default">
