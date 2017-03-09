@@ -656,60 +656,66 @@
                     var cantidadPersonas = cabanas[i].personas;
                     if(cantidadPersonas >= totalPer){
 
-                        var cabanasReservas = [];
-                    var cab = [];
-                    cab = cabanas[i].reservas;
-                    var caba = []; 
-                    caba = cabanas[i].temporada;
-                    var cabanasDias = [];
-                    var banderaReservas = false;
-                    var banderaTemporada = false;
-                    var banderaNofecha = false;
-
-                    //saco los dias de las cabanas que estan reservadas
-                    for (var k = 0; k < cab.length; k++) {
-                        cabanasReservas.push(cab[k].fecha);
-                    }
-                    //saco los dias de la fecha 
-                    for (var m = 0; m < caba.length; m++) {
-                        cabanasDias.push(caba[m].fecha);
-                    }
-                    //--------------------------------
-
-                    for (var j = 0; j < (diasDiferencia + 1); j++) {
-                        // sumar dias tras dia
-                        var diaInicialBucle = ("0"+fechaInicial.getDate()).slice(-2);
-                        var mesInicialBucle = ("0"+(fechaInicial.getMonth()+1)).slice(-2);
-                        var anioInicialBucle = fechaInicial.getFullYear();
-                        var fechaPostaBucle = anioInicialBucle+"/"+mesInicialBucle+"/"+diaInicialBucle;
-
-                        var milisegundos=parseInt(j*24*60*60*1000);
-                        var diaSumado = new Date(fechaPostaBucle);
-                        var tiempo = diaSumado.getTime();
-                        diaSumado.setTime(tiempo+milisegundos);
-
-                        var diaInicial = ("0"+diaSumado.getDate()).slice(-2);
-                        var mesInicial = ("0"+(diaSumado.getMonth()+1)).slice(-2);
-                        var anioInicial = diaSumado.getFullYear();
-
-                        fechaPostaInicial = anioInicial+"-"+mesInicial+"-"+diaInicial;
-                        //------
-                        var n = cabanasReservas.indexOf(fechaPostaInicial);
-                        var e = cabanasDias.indexOf(fechaPostaInicial);
-                        if(n >= 0){
-                            banderaReservas = true;
-                            //break;
+                        if(desayuno){
+                            $scope.cartelDesa = "Desayuno incluido.";
                         }else{
-                            if(e >= 0){
-                                banderaTemporada = true;
+                            $scope.cartelDesa = "Sin desayuno.";
+                        }
+
+                        var cabanasReservas = [];
+                        var cab = [];
+                        cab = cabanas[i].reservas;
+                        var caba = []; 
+                        caba = cabanas[i].temporada;
+                        var cabanasDias = [];
+                        var banderaReservas = false;
+                        var banderaTemporada = false;
+                        var banderaNofecha = false;
+
+                        //saco los dias de las cabanas que estan reservadas
+                        for (var k = 0; k < cab.length; k++) {
+                            cabanasReservas.push(cab[k].fecha);
+                        }
+                        //saco los dias de la fecha 
+                        for (var m = 0; m < caba.length; m++) {
+                            cabanasDias.push(caba[m].fecha);
+                        }
+                        //--------------------------------
+
+                        for (var j = 0; j < (diasDiferencia + 1); j++) {
+                            // sumar dias tras dia
+                            var diaInicialBucle = ("0"+fechaInicial.getDate()).slice(-2);
+                            var mesInicialBucle = ("0"+(fechaInicial.getMonth()+1)).slice(-2);
+                            var anioInicialBucle = fechaInicial.getFullYear();
+                            var fechaPostaBucle = anioInicialBucle+"/"+mesInicialBucle+"/"+diaInicialBucle;
+
+                            var milisegundos=parseInt(j*24*60*60*1000);
+                            var diaSumado = new Date(fechaPostaBucle);
+                            var tiempo = diaSumado.getTime();
+                            diaSumado.setTime(tiempo+milisegundos);
+
+                            var diaInicial = ("0"+diaSumado.getDate()).slice(-2);
+                            var mesInicial = ("0"+(diaSumado.getMonth()+1)).slice(-2);
+                            var anioInicial = diaSumado.getFullYear();
+
+                            fechaPostaInicial = anioInicial+"-"+mesInicial+"-"+diaInicial;
+                            //------
+                            var n = cabanasReservas.indexOf(fechaPostaInicial);
+                            var e = cabanasDias.indexOf(fechaPostaInicial);
+                            if(n >= 0){
+                                banderaReservas = true;
                                 //break;
                             }else{
-                                banderaNofecha = true;
+                                if(e >= 0){
+                                    banderaTemporada = true;
+                                    //break;
+                                }else{
+                                    banderaNofecha = true;
+                                }
                             }
-                        }
-                        
+                            
 
-                    }
+                        }
 
                     var ReserTest = [];
                     ReserTest = cabanas[i].temporada;
