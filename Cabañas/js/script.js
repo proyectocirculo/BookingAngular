@@ -85,7 +85,7 @@
                 $scope.fechaMin = anioMinInicial+"-"+mesMinInicial+"-"+diaMinInicial;
 
                 //--------------------------------------
-                var milisegundos=parseInt(4*24*60*60*1000);
+                var milisegundos=parseInt(2*24*60*60*1000);
                 var diaSumado = new Date($scope.fechaMin);
                 var tiempo = diaSumado.getTime();
                 diaSumado.setTime(tiempo+milisegundos);
