@@ -114,7 +114,7 @@
                             "temporada": [
             
             {
-                "fecha": "2017-03-07",
+                "fecha": "2017-03-22",
                 "precioTemporada": "1000",
                 "precioDesayuno": "1111",
                 "tipoTemporada": "Media",
@@ -125,7 +125,7 @@
 
             },
             {
-                "fecha": "2017-03-08",
+                "fecha": "2017-03-23",
                 "precioTemporada": "900",
                 "precioDesayuno": "4444",
                 "tipoTemporada": "Media",
@@ -137,7 +137,7 @@
             },
             
             {
-                "fecha": "2017-03-09",
+                "fecha": "2017-03-24",
                 "precioTemporada": "1736",
                 "precioDesayuno": "2000",
                 "tipoTemporada": "Media",
@@ -146,7 +146,7 @@
             },
 
             {
-                "fecha": "2017-02-10",
+                "fecha": "2017-03-25",
                 "precioTemporada": "1736",
                 "precioDesayuno": "2000",
                 "tipoTemporada": "Media",
@@ -397,12 +397,13 @@
 
             var reservaciones = temporada;
             var diferencia = fechaFinal - fechaInicial;
+
             var diasDiferencia = Math.round(diferencia/(1000 * 60 * 60 * 24));
             var fechasVerificar =[];
             var cabanasReservadas = [];
             var cabanasSinReservas = [];
 
-            for (var i = 0; i < (diasDiferencia+1) ; i++) {
+            for (var i = 0; i < (diasDiferencia) ; i++) {
 
                 for (var t = 0; t < reservas.length; t++) {
                     cabanasReservadas.push(reservas[t].fecha);
@@ -612,9 +613,7 @@
         $scope.calcularReservas = function(fechaInicial, fechaFinal, cabanas, desayuno,nroAdulto,nroMenor) {
 
             cabanas = $scope.CabanasFull;
-
-            var resta=parseInt(1*24*60*60*1000);
-            fechaFinal.setTime(fechaFinal.getTime()-resta);
+            
             var totalPer = nroAdulto + nroMenor;
             $scope.myValor = true;
             var cantidadLoop = cabanas.length;
