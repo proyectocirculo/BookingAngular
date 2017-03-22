@@ -613,7 +613,7 @@
         $scope.calcularReservas = function(fechaInicial, fechaFinal, cabanas, desayuno,nroAdulto,nroMenor) {
 
             cabanas = $scope.CabanasFull;
-            
+
             var totalPer = nroAdulto + nroMenor;
             $scope.myValor = true;
             var cantidadLoop = cabanas.length;
