@@ -114,7 +114,7 @@
                             "temporada": [
             
             {
-                "fecha": "2017-03-22",
+                "fecha": "2017-04-18",
                 "precioTemporada": "1000",
                 "precioDesayuno": "1111",
                 "tipoTemporada": "Media",
@@ -614,6 +614,16 @@
 
             cabanas = $scope.CabanasFull;
 
+            var mesCargadoInicial = ("0"+(fechaInicial.getMonth()+1)).slice(-2);
+
+            var mesCargadoFinal = ("0"+(fechaFinal.getMonth()+1)).slice(-2);
+
+            var nombreMesInicial = GetMonthName(mesCargadoInicial);
+            var nombreMesFinal = GetMonthName(mesCargadoFinal);
+
+            $scope.cartelfechaEntrada = "Entrada | " + fechaInicial.getDate() +" "+ nombreMesInicial +" "+ fechaInicial.getFullYear();
+            $scope.cartelfechaSalida = "Salida | " + fechaFinal.getDate() +" "+ nombreMesFinal +" "+ fechaFinal.getFullYear();
+
             var totalPer = nroAdulto + nroMenor;
             $scope.myValor = true;
             var cantidadLoop = cabanas.length;
@@ -931,6 +941,55 @@
                 }).error(function(){
                     alert('Error al intentar enviar los datos.');
                 });
+
+        }
+
+
+        function GetMonthName(mes){
+
+            var mesEscrito;
+
+            switch (mes) {
+                    case "01":
+                        mesEscrito = "Enero";
+                        break;
+                    case "02":
+                        mesEscrito = "Febrero";
+                        break;
+                    case "03":
+                        mesEscrito = "Marzo";
+                        break;
+                    case "04":
+                        mesEscrito = "Abril";
+                        break;
+                    case "05":
+                        mesEscrito = "Mayo";
+                        break;
+                    case "06":
+                        mesEscrito = "Junio";
+                        break;
+                    case "07":
+                        mesEscrito = "Julio";
+                        break;
+                    case "08":
+                        mesEscrito = "Agosto";
+                        break;
+                    case "09":
+                        mesEscrito = "Septiembre";
+                        break;                                
+                    case "10":
+                        mesEscrito = "Octubre";
+                        break;
+                    case "11":
+                        mesEscrito = "Noviembre";
+                        break;
+                    case "12":
+                        mesEscrito = "Diciembre";
+                        break;    
+                }
+
+
+             return mesEscrito;   
 
         }
 
