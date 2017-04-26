@@ -113,50 +113,71 @@
                             //array temporada    
                             "temporada": [
             
-            {
-                "fecha": "2017-04-18",
-                "precioTemporada": "1000",
-                "precioDesayuno": "1111",
-                "tipoTemporada": "Media",
-                "preciosPax": [{"2pax": "1000"},{"3pax": "2000"},
-                               {"4pax": "3000"},{"5pax": "4000"}],
-                "preciosDesa": [{"2pax": "1111"},{"3pax": "2222"},
-                                {"4pax": "3333"},{"5pax": "4444"}]                
+                                {
+                                    "fecha": "2017-04-25",
+                                    "precioTemporada": "1000",
+                                    "precioDesayuno": "1111",
+                                    "tipoTemporada": "Media",
+                                    "preciosPax": [{"2pax": "1000"},{"3pax": "2000"},
+                                                   {"4pax": "3000"},{"5pax": "4000"}],
+                                    "preciosDesa": [{"2pax": "1111"},{"3pax": "2222"},
+                                                    {"4pax": "3333"},{"5pax": "4444"}]                
 
-            },
-            {
-                "fecha": "2017-03-23",
-                "precioTemporada": "900",
-                "precioDesayuno": "4444",
-                "tipoTemporada": "Media",
-                "preciosPax": [{"2pax": "900"},{"3pax": "4000"},
-                               {"4pax": "5000"},{"5pax": "6000"}],
+                                },
+                                {
+                                    "fecha": "2017-04-26",
+                                    "precioTemporada": "900",
+                                    "precioDesayuno": "4444",
+                                    "tipoTemporada": "Media",
+                                    "preciosPax": [{"2pax": "900"},{"3pax": "4000"},
+                                                   {"4pax": "5000"},{"5pax": "6000"}],
 
-                "preciosDesa": [{"2pax": "4444"},{"3pax": "5555"},
-                                {"4pax": "6666"},{"5pax": "7777"}]
-            },
-            
-            {
-                "fecha": "2017-03-24",
-                "precioTemporada": "1736",
-                "precioDesayuno": "2000",
-                "tipoTemporada": "Media",
-                "preciosPax": [{"2pax": "1736"},{"3pax": "2096"}],
-                "preciosDesa": [{"2pax": "2000"},{"3pax": "3000"}]
-            },
+                                    "preciosDesa": [{"2pax": "4444"},{"3pax": "5555"},
+                                                    {"4pax": "6666"},{"5pax": "7777"}]
+                                },
+                                
+                                {
+                                    "fecha": "2017-04-27",
+                                    "precioTemporada": "1736",
+                                    "precioDesayuno": "2000",
+                                    "tipoTemporada": "Media",
+                                    "preciosPax": [{"2pax": "1736"},{"3pax": "2096"}],
+                                    "preciosDesa": [{"2pax": "2000"},{"3pax": "3000"}]
+                                },
 
-            {
-                "fecha": "2017-03-25",
-                "precioTemporada": "1736",
-                "precioDesayuno": "2000",
-                "tipoTemporada": "Media",
-                "preciosPax": [{"2pax": "1736"},{"3pax": "2096"}],
-                "preciosDesa": [{"2pax": "2000"},{"3pax": "3000"}]
-            }
+                                {
+                                    "fecha": "2017-03-28",
+                                    "precioTemporada": "1736",
+                                    "precioDesayuno": "2000",
+                                    "tipoTemporada": "Media",
+                                    "preciosPax": [{"2pax": "1736"},{"3pax": "2096"}],
+                                    "preciosDesa": [{"2pax": "2000"},{"3pax": "3000"}]
+                                }],
 
-        ],
+         "galeria":[
+         {
+            "url":"http://consolaytablero.com/wp-content/uploads/2016/03/dragon-ball-fierce-fighting-analisis.jpg?w=585",
+            "active":true,
+         },
+         {
+            "url":"https:\/\/colinadelmanzano.com.ar\/pruebas\/public_html\/thumbnails\/1mDbZEyfSmKz3Dt0vVYjDEoB2geJZVP1QUr4q9VRFAa5y03nn8y",
+            "active":false,
+        },
+         {
+            "url":"https:\/\/colinadelmanzano.com.ar\/pruebas\/public_html\/thumbnails\/1bp4802ZnGRPcQ3UZlZ1t0Np9TOetIjhVJ3vuYmINBkyies0JYm",
+            "active":false,
+        },
+         {
+            "url":"https:\/\/colinadelmanzano.com.ar\/pruebas\/public_html\/thumbnails\/1oDVWKEV7AufFY8cv4OqX0yEhWOdwIaMyP5o9eNMubLmtdsAB8a",
+            "active":false,
+        },
+         {
+            "url":"https:\/\/colinadelmanzano.com.ar\/pruebas\/public_html\/thumbnails\/1mDbZEyfSmKz3Dt0vVYjDEoB2geJZVP1QUr4q9VRFAa5y03nn8y",
+            "active":false,
+        }
+            ],                       
 
-                                    "servicios":[{"srv":"iconos-_pileta.jpg"},{"srv":"iconos-_auto.jpg"}]},
+        "servicios":[{"srv":"iconos-_pileta.jpg"},{"srv":"iconos-_auto.jpg"}]},
                               
                             {"casa":"ElGallo","id":104,"nombre":"El Gallote","descripcion":"100m2 1 Cama Matrimoniales, 3 Camas individuales","precio":400,"camas":"4",
                             "personas":"4","tamanio":"","img":"104El Gallo",
@@ -166,7 +187,7 @@
                             //array temporada    
                             "temporada":[
                                         {
-                                            "fecha": "2017-03-11",
+                                            "fecha": "2017-04-25",
                                             "precioTemporada": "1000",
                                             "precioDesayuno": "1111",
                                             "tipoTemporada": "Media",
@@ -177,7 +198,18 @@
 
                                         },
                                         {
-                                            "fecha": "2017-03-12",
+                                            "fecha": "2017-04-27",
+                                            "precioTemporada": "950",
+                                            "precioDesayuno": "1111",
+                                            "tipoTemporada": "Media",
+                                            "preciosPax": [{"2pax": "950"},{"3pax": "2000"},
+                                                           {"4pax": "3000"},{"5pax": "4000"}],
+                                            "preciosDesa": [{"2pax": "1111"},{"3pax": "2222"},
+                                                            {"4pax": "3333"},{"5pax": "4444"}]                
+
+                                        },
+                                        {
+                                            "fecha": "2017-04-29",
                                             "precioTemporada": "1000",
                                             "precioDesayuno": "1111",
                                             "tipoTemporada": "Media",
@@ -188,18 +220,7 @@
 
                                         },
                                         {
-                                            "fecha": "2017-03-16",
-                                            "precioTemporada": "1000",
-                                            "precioDesayuno": "1111",
-                                            "tipoTemporada": "Media",
-                                            "preciosPax": [{"2pax": "1000"},{"3pax": "2000"},
-                                                           {"4pax": "3000"},{"5pax": "4000"}],
-                                            "preciosDesa": [{"2pax": "1111"},{"3pax": "2222"},
-                                                            {"4pax": "3333"},{"5pax": "4444"}]                
-
-                                        },
-                                        {
-                                            "fecha": "2017-03-19",
+                                            "fecha": "2017-05-02",
                                             "precioTemporada": "1000",
                                             "precioDesayuno": "1111",
                                             "tipoTemporada": "Media",
@@ -211,6 +232,12 @@
                                         }
 
                                         ],            
+
+                                    "galeria":[{"url":"https:\/\/colinadelmanzano.com.ar\/pruebas\/public_html\/thumbnails\/2ZJQIIwLMXJK8oOrYJUc1bdEvqefWmiJ2TSGD9MZ3mrA3zjvK2B"},
+                                    {"url":"https:\/\/colinadelmanzano.com.ar\/pruebas\/public_html\/thumbnails\/2gpjlgfiVyq6djRBf7NZrycpdZmTxGUAAPYSyqdROApCdiu5eCV"},
+                                    {"url":"https:\/\/colinadelmanzano.com.ar\/pruebas\/public_html\/thumbnails\/2VmePXDyA0a4DFjTcVCx1Sr6wg9BppWU3ZAaFz9IjFoEj5vOUB1"},
+                                    {"url":"https:\/\/colinadelmanzano.com.ar\/pruebas\/public_html\/thumbnails\/2AZYMsYuCgnvrP5kyKRuORCkuAc3O7ajJ6jwqFzGzkLVuecHtHX"},
+                                    {"url":"https:\/\/colinadelmanzano.com.ar\/pruebas\/public_html\/thumbnails\/2qoe2ROV3Cm6scZ22UKg5WXvQxtKiIX9kJtY8yYCUm9OdrXxCku"}],    
 
                                     "servicios":[{"srv":"iconos-_pileta.jpg"}]},
                               
@@ -228,7 +255,7 @@
                             "temporada": [
             
             {
-                "fecha": "2017-03-07",
+                "fecha": "2017-04-25",
                 "precioTemporada": "1000",
                 "precioDesayuno": "1111",
                 "tipoTemporada": "Media",
@@ -239,7 +266,7 @@
 
             },
             {
-                "fecha": "2017-03-08",
+                "fecha": "2017-04-26",
                 "precioTemporada": "900",
                 "precioDesayuno": "4444",
                 "tipoTemporada": "Media",
@@ -269,6 +296,30 @@
             }
 
         ],
+
+        "galeria":[
+         {
+            "url":"http://cdn.colombia.com/sdi/2016/05/19/dragon-ball-confirma-su-xenoverse-2-497939.jpg",
+            "active":true,
+         },
+         {
+            "url":"https:\/\/colinadelmanzano.com.ar\/pruebas\/public_html\/thumbnails\/1mDbZEyfSmKz3Dt0vVYjDEoB2geJZVP1QUr4q9VRFAa5y03nn8y",
+            "active":false,
+        },
+         {
+            "url":"https:\/\/colinadelmanzano.com.ar\/pruebas\/public_html\/thumbnails\/1bp4802ZnGRPcQ3UZlZ1t0Np9TOetIjhVJ3vuYmINBkyies0JYm",
+            "active":false,
+        },
+         {
+            "url":"https:\/\/colinadelmanzano.com.ar\/pruebas\/public_html\/thumbnails\/1oDVWKEV7AufFY8cv4OqX0yEhWOdwIaMyP5o9eNMubLmtdsAB8a",
+            "active":false,
+        },
+         {
+            "url":"https:\/\/colinadelmanzano.com.ar\/pruebas\/public_html\/thumbnails\/1mDbZEyfSmKz3Dt0vVYjDEoB2geJZVP1QUr4q9VRFAa5y03nn8y",
+            "active":false,
+        }
+            ],
+
                             "servicios":[{"srv":"iconos-_market.jpg"}]},
                               
                             {"casa":"ElGato","id":99,"nombre":"El Gatito",
@@ -321,7 +372,30 @@
                 "preciosDesa": [{"2pax": "2000"},{"3pax": "3000"}]
             }
 
-        ],           
+        ],     
+
+        "galeria":[
+         {
+            "url":"http://cdn.colombia.com/sdi/2016/05/19/dragon-ball-confirma-su-xenoverse-2-497939.jpg",
+            "active":true,
+         },
+         {
+            "url":"https:\/\/colinadelmanzano.com.ar\/pruebas\/public_html\/thumbnails\/1mDbZEyfSmKz3Dt0vVYjDEoB2geJZVP1QUr4q9VRFAa5y03nn8y",
+            "active":false,
+        },
+         {
+            "url":"https:\/\/colinadelmanzano.com.ar\/pruebas\/public_html\/thumbnails\/1bp4802ZnGRPcQ3UZlZ1t0Np9TOetIjhVJ3vuYmINBkyies0JYm",
+            "active":false,
+        },
+         {
+            "url":"https:\/\/colinadelmanzano.com.ar\/pruebas\/public_html\/thumbnails\/1oDVWKEV7AufFY8cv4OqX0yEhWOdwIaMyP5o9eNMubLmtdsAB8a",
+            "active":false,
+        },
+         {
+            "url":"https:\/\/colinadelmanzano.com.ar\/pruebas\/public_html\/thumbnails\/1mDbZEyfSmKz3Dt0vVYjDEoB2geJZVP1QUr4q9VRFAa5y03nn8y",
+            "active":false,
+        }
+            ],       
 
                                         "servicios":[{"srv":"iconos-_wifi.jpg"},{"srv":"iconos-_auto.jpg"},{"srv":"iconos-_grill.jpg"}]},
                               
@@ -376,6 +450,12 @@
             }
 
         ],   
+
+        "galeria":[{"url":"https:\/\/colinadelmanzano.com.ar\/pruebas\/public_html\/thumbnails\/2ZJQIIwLMXJK8oOrYJUc1bdEvqefWmiJ2TSGD9MZ3mrA3zjvK2B"},
+                                    {"url":"https:\/\/colinadelmanzano.com.ar\/pruebas\/public_html\/thumbnails\/2gpjlgfiVyq6djRBf7NZrycpdZmTxGUAAPYSyqdROApCdiu5eCV"},
+                                    {"url":"https:\/\/colinadelmanzano.com.ar\/pruebas\/public_html\/thumbnails\/2VmePXDyA0a4DFjTcVCx1Sr6wg9BppWU3ZAaFz9IjFoEj5vOUB1"},
+                                    {"url":"https:\/\/colinadelmanzano.com.ar\/pruebas\/public_html\/thumbnails\/2AZYMsYuCgnvrP5kyKRuORCkuAc3O7ajJ6jwqFzGzkLVuecHtHX"},
+                                    {"url":"https:\/\/colinadelmanzano.com.ar\/pruebas\/public_html\/thumbnails\/2qoe2ROV3Cm6scZ22UKg5WXvQxtKiIX9kJtY8yYCUm9OdrXxCku"}],
 
                                     "servicios":[{"srv":"iconos-_deck.jpg"},{"srv":"iconos-_wifi.jpg"},{"srv":"iconos-_grill.jpg"}]}]
             
@@ -800,7 +880,11 @@
                                     servicios: cabanas[i].servicios,
                                     cabanaConreserva: "conReserva",
                                     estado: "Sin Fechas Reservadas",
+                                    galeria: cabanas[i].galeria
                                     }
+
+                                    
+
                         cabanaConReserva.push(a);
                     }else{
 
@@ -839,7 +923,8 @@
                                     temporada: cabanas[i].temporada,
                                     servicios: cabanas[i].servicios,
                                     cabanaConreserva: "disponibles",
-                                    estado: "Fechas Disponibles"
+                                    estado: "Fechas Disponibles",
+                                    galeria: cabanas[i].galeria
                                     }
                                 cabanaDispo.push(a);
                             //cabañas de fechas disponibles----------    
@@ -876,7 +961,8 @@
                                     temporada: cabanas[i].temporada,
                                     servicios: cabanas[i].servicios,
                                     cabanaConreserva: "sinReserva",
-                                    estado: elEstado
+                                    estado: elEstado,
+                                    galeria: cabanas[i].galeria
                                     }
                             cabanaSinReserva.push(a);
                             $scope.cabanasDisponibles += 1;
