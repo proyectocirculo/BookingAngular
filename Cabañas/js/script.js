@@ -12,7 +12,7 @@
             var deferred = $q.defer();
 
             if(cabanas == null){
-                $http.get('https://colinadelmanzano.com.ar/pruebas/todos/jsoncabaniasdos')
+                $http.get('http://api.geonames.org/citiesJSON?north=44.1&south=-9.9&east=-22.4&west=55.2&lang=de&username=demo')
                 .then(function(result){
                     deferred.resolve(result);
                 },
@@ -114,44 +114,52 @@
                             "temporada": [
             
                                 {
-                                    "fecha": "2017-04-25",
-                                    "precioTemporada": "1000",
-                                    "precioDesayuno": "1111",
+                                    "fecha": "2017-08-05",
+                                    "precioTemporada": "600",
+                                    "precioDesayuno": "950",
                                     "tipoTemporada": "Media",
-                                    "preciosPax": [{"2pax": "1000"},{"3pax": "2000"},
-                                                   {"4pax": "3000"},{"5pax": "4000"}],
-                                    "preciosDesa": [{"2pax": "1111"},{"3pax": "2222"},
-                                                    {"4pax": "3333"},{"5pax": "4444"}]                
+                                    "preciosPax": [{"2pax": "600"},{"3pax": "901"},
+                                                   {"4pax": "1200"},{"5pax": "1500"}],
+
+                                    "preciosDesa": [{"2pax": "950"},{"3pax": "1050"},
+                                                    {"4pax": "3333"},{"5pax": "4444"}],
+
 
                                 },
                                 {
-                                    "fecha": "2017-04-26",
+                                    "fecha": "2017-08-07",
                                     "precioTemporada": "900",
-                                    "precioDesayuno": "4444",
+                                    "precioDesayuno": "899",
                                     "tipoTemporada": "Media",
-                                    "preciosPax": [{"2pax": "900"},{"3pax": "4000"},
-                                                   {"4pax": "5000"},{"5pax": "6000"}],
+                                    "preciosPax": [{"2pax": "951"},{"3pax": "906"},
+                                                   {"4pax": "1200"},{"5pax": "1500"}],
 
-                                    "preciosDesa": [{"2pax": "4444"},{"3pax": "5555"},
-                                                    {"4pax": "6666"},{"5pax": "7777"}]
+                                    "preciosDesa": [{"2pax": "899"},{"3pax": "1000"},
+                                                    {"4pax": "1600"},{"5pax": "1800"}]
                                 },
                                 
                                 {
-                                    "fecha": "2017-04-27",
-                                    "precioTemporada": "1736",
+                                    "fecha": "2017-08-09",
+                                    "precioTemporada": "650",
                                     "precioDesayuno": "2000",
                                     "tipoTemporada": "Media",
-                                    "preciosPax": [{"2pax": "1736"},{"3pax": "2096"}],
-                                    "preciosDesa": [{"2pax": "2000"},{"3pax": "3000"}]
+                                    "preciosPax": [{"2pax": "823"},{"3pax": "900"},
+                                                   {"4pax": "1300"},{"5pax": "1501"}],
+                                    
+                                    "preciosDesa": [{"2pax": "952"},{"3pax": "999"},
+                                                    {"4pax": "1602"},{"5pax": "1700"}]
                                 },
 
                                 {
-                                    "fecha": "2017-03-28",
+                                    "fecha": "2017-08-14",
                                     "precioTemporada": "1736",
                                     "precioDesayuno": "2000",
                                     "tipoTemporada": "Media",
-                                    "preciosPax": [{"2pax": "1736"},{"3pax": "2096"}],
-                                    "preciosDesa": [{"2pax": "2000"},{"3pax": "3000"}]
+                                    "preciosPax": [{"2pax": "766"},{"3pax": "906"},
+                                                   {"4pax": "1199"},{"5pax": "1502"}],
+                                    
+                                    "preciosDesa": [{"2pax": "950"},{"3pax": "1400"},
+                                                    {"4pax": "1609"},{"5pax": "1800"}]
                                 }],
 
          "galeria":[
@@ -187,47 +195,39 @@
                             //array temporada    
                             "temporada":[
                                         {
-                                            "fecha": "2017-04-25",
-                                            "precioTemporada": "1000",
+                                            "fecha": "2017-08-08",
+                                            "precioTemporada": "750",
                                             "precioDesayuno": "1111",
                                             "tipoTemporada": "Media",
-                                            "preciosPax": [{"2pax": "1000"},{"3pax": "2000"},
-                                                           {"4pax": "3000"},{"5pax": "4000"}],
-                                            "preciosDesa": [{"2pax": "1111"},{"3pax": "2222"},
-                                                            {"4pax": "3333"},{"5pax": "4444"}]                
+                                            "preciosPax": [{"2pax": "750"},{"3pax": "980"},
+                                                           {"4pax": "1200"},{"5pax": "1500"}],
+
+                                            "preciosDesa": [{"2pax": "1000"},{"3pax": "1100"},
+                                                            {"4pax": "1900"},{"5pax": "1999"}]                
 
                                         },
                                         {
-                                            "fecha": "2017-04-27",
+                                            "fecha": "2017-08-12",
                                             "precioTemporada": "950",
                                             "precioDesayuno": "1111",
                                             "tipoTemporada": "Media",
-                                            "preciosPax": [{"2pax": "950"},{"3pax": "2000"},
-                                                           {"4pax": "3000"},{"5pax": "4000"}],
-                                            "preciosDesa": [{"2pax": "1111"},{"3pax": "2222"},
-                                                            {"4pax": "3333"},{"5pax": "4444"}]                
+                                            "preciosPax": [{"2pax": "760"},{"3pax": "960"},
+                                                           {"4pax": "1200"},{"5pax": "1500"}],
+
+                                            "preciosDesa": [{"2pax": "1200"},{"3pax": "1300"},
+                                                            {"4pax": "1350"},{"5pax": "1800"}]                
 
                                         },
                                         {
-                                            "fecha": "2017-04-29",
+                                            "fecha": "2017-08-13",
                                             "precioTemporada": "1000",
                                             "precioDesayuno": "1111",
                                             "tipoTemporada": "Media",
-                                            "preciosPax": [{"2pax": "1000"},{"3pax": "2000"},
-                                                           {"4pax": "3000"},{"5pax": "4000"}],
-                                            "preciosDesa": [{"2pax": "1111"},{"3pax": "2222"},
-                                                            {"4pax": "3333"},{"5pax": "4444"}]                
+                                            "preciosPax": [{"2pax": "740"},{"3pax": "990"},
+                                                           {"4pax": "1200"},{"5pax": "1500"}],
 
-                                        },
-                                        {
-                                            "fecha": "2017-05-02",
-                                            "precioTemporada": "1000",
-                                            "precioDesayuno": "1111",
-                                            "tipoTemporada": "Media",
-                                            "preciosPax": [{"2pax": "1000"},{"3pax": "2000"},
-                                                           {"4pax": "3000"},{"5pax": "4000"}],
-                                            "preciosDesa": [{"2pax": "1111"},{"3pax": "2222"},
-                                                            {"4pax": "3333"},{"5pax": "4444"}]                
+                                            "preciosDesa": [{"2pax": "1000"},{"3pax": "1100"},
+                                                            {"4pax": "1600"},{"5pax": "1349"}]                
 
                                         }
 
@@ -259,7 +259,7 @@
                 "precioTemporada": "1000",
                 "precioDesayuno": "1111",
                 "tipoTemporada": "Media",
-                "preciosPax": [{"2pax": "1000"},{"3pax": "2000"},
+                "preciosPax": [{"2pax": "1000"},{"3pax": "2003"},
                                {"4pax": "3000"},{"5pax": "4000"}],
                 "preciosDesa": [{"2pax": "1111"},{"3pax": "2222"},
                                 {"4pax": "3333"},{"5pax": "4444"}]                
@@ -808,6 +808,44 @@
 
                     var ReserTest = [];
                     ReserTest = cabanas[i].temporada;
+
+                    //calcula el precio segun la cantidad de personas
+
+                    var numIdice = totalPer - 2;
+
+                    if(desayuno){
+
+                        for (var s = 0; s < ReserTest.length; s++) {
+                            var prePax = ReserTest[s].preciosDesa;
+                            var prePrevio = JSON.stringify(prePax[numIdice]);
+
+                            if(prePax.length > numIdice){
+                                prePrevio = prePrevio.substring(9);
+                                var numString = prePrevio.length;
+                                numString = numString - 2;
+                                var preTest = prePrevio.substring(0,numString);
+                                ReserTest[s].precioDesayuno = preTest;
+                            }
+                        }
+
+                    }else{
+                        for (var s = 0; s < ReserTest.length; s++) {
+                        
+                        var prePax = ReserTest[s].preciosPax;
+                        var prePrevio = JSON.stringify(prePax[numIdice]);
+
+                        if(prePax.length > numIdice){
+                            prePrevio = prePrevio.substring(9);
+                            var numString = prePrevio.length;
+                            numString = numString - 2;
+                            var preTest = prePrevio.substring(0,numString);
+                            ReserTest[s].precioTemporada = preTest;
+                        }
+
+                    }
+                    }
+
+
                     var diaInicialPrecio = ("0"+fechaInicial.getDate()).slice(-2);
                     var mesInicialPrecio = ("0"+(fechaInicial.getMonth()+1)).slice(-2);
                     mesInicialPrecio = mesInicialPrecio - 1;
@@ -847,6 +885,8 @@
                         ||((banderaReservas == true)&&(banderaTemporada == false)&&(banderaNofecha == false))
                         ){
                         //quiere decir que existe por lo menos una fecha que este entre los reservados
+
+                        //calculo del precio segun la cantidad de personas 
 
                         ReserTest.sort(function(a, b){
                             return a.precioTemporada - b.precioTemporada;
@@ -1005,6 +1045,13 @@
             }
 
         };
+
+        //-----------------------------------
+        $scope.changePerson = function(nroAdulto){
+            
+        }
+
+
 
         //-----------Mandar por POST los datos para reservar----------
         $scope.sendPost = function(fechaIni,fechaSal,nroAdulto,nroMenor, reservas, temporada) {

@@ -32,12 +32,12 @@
 
 					<div class="col-lg-12 fechasIng">
 					  <span class="input-group-addon">Cantidad de Personas (Adultos)</span>
-					  <input type="number" value="1" ng-model="nroAdulto" class="form-control" min="1" max="6" step="1">
+					  <input type="number" value="1" ng-change="changePerson(nroAdulto);resetAllElemet();calcularReservas(fechaIni,fechaSal,cabanas,desayuno,nroAdulto,nroMenor);" ng-model="nroAdulto" class="form-control" min="1" max="6" step="1">
 					</div>
 
 					<div class="col-lg-12 fechasIng">
 					  <span class="input-group-addon">Cantidad de Personas (Menores)</span>
-					  <input type="number" value="1" ng-model="nroMenor" class="form-control" min="0" max="4" step="1">
+					  <input type="number" value="1" ng-change="changePerson(nroAdulto);resetAllElemet();calcularReservas(fechaIni,fechaSal,cabanas,desayuno,nroAdulto,nroMenor);" ng-model="nroMenor" class="form-control" min="0" max="4" step="1">
 					</div>
 
 					<div class="col-lg-12 desa">
@@ -136,12 +136,11 @@
 				      	<button class="btn btn-primary"> Ver Cabana </button>
 				      	<br>
 				      	<br>
-				      	<!--carousel-->
+				      	<!--carousel
 				      	<div class="col-lg-12">
-			    			<div id="carousel-example-generic-{{cabanas[0].casa}}" class="carousel slide" data-ride="carousel">
-							  <!-- Indicators -->
 
-								  <!-- Wrapper for slides -->
+			    			<div id="carousel-example-generic-{{cabanas[0].casa}}" class="carousel slide" data-ride="carousel">
+
 								  <div class="carousel-inner" role="listbox"> 
 								    
 								    <div ng-class=" {{gale.active}} ? 'item active' : 'item'" ng-repeat="gale in cabanas[0].galeria">
@@ -150,7 +149,6 @@
 
 								  </div>
 
-								  <!-- Controls -->
 								  <a class="left carousel-control" href="#carousel-example-generic-{{cabanas[0].casa}}" role="button" data-slide="prev">
 								    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 								    <span class="sr-only">Previous</span>
@@ -161,7 +159,7 @@
 								  </a>
 							</div>
 			    		</div>
-				      	<!-- fin carousel-->
+				      	fin carousel-->
 
 				      </div>
 
@@ -289,12 +287,10 @@
 				      	<button class="btn btn-primary"> Ver Cabana </button>
 						<br>
 				      	<br>
-				      	<!--carousel-->
+				      	<!--carousel
 				      	<div class="col-lg-12">
 			    			<div id="carousel-example-generic-{{cabanas[1].casa}}" class="carousel slide" data-ride="carousel">
-							  <!-- Indicators -->
 
-								  <!-- Wrapper for slides -->
 								  <div class="carousel-inner" role="listbox"> 
 								    
 								    <div ng-class=" {{gale.active}} ? 'item active' : 'item'" ng-repeat="gale in cabanas[1].galeria">
@@ -303,7 +299,6 @@
 
 								  </div>
 
-								  <!-- Controls -->
 								  <a class="left carousel-control" href="#carousel-example-generic-{{cabanas[1].casa}}" role="button" data-slide="prev">
 								    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 								    <span class="sr-only">Previous</span>
@@ -314,8 +309,7 @@
 								  </a>
 							</div>
 			    		</div>
-				      	<!-- fin carousel-->
-
+				      	fin carousel-->
 
 				      </div>
 
