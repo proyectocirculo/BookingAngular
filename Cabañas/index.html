@@ -18,7 +18,7 @@
     	<div class="row" id="mainCtrl" ng-controller="MainController">
     		
     		<div class="container form-group col-lg-3">
-				  	<h4>Seleccione las fechas:</h4>
+				  	<h4>Seleccione las fechas papa:</h4>
 
 				  	<div class="col-lg-12 fechasIng">
 				  	  <span class="input-group-addon">Entrada</span>
@@ -91,11 +91,17 @@
 		                    <div class="panel panel-yellow">
 		                        <div class="panel-heading">
 		                            <div class="row">
-		                                <div class="col-xs-12 text-center">
+
+		                            	<div class="col-xs-12 text-center" ng-if="cabanas[0].cabanaConreserva == 'conReserva'"> 
+	                                    	<h4>PRECIO NO DISPONIBLE</h4>
+		                                </div>
+
+		                                <div class="col-xs-12 text-center" ng-if="cabanas[0].cabanaConreserva == 'disponibles'"> 
 	                                    	<h4>DESDE</h4>
 	                                    	<div class="huge">${{cabanas[0].precio}}</div>
 	                                    	<h4>P/Día</h4>
 		                                </div>
+
 		                            </div>
 		                        </div>
 
@@ -243,11 +249,17 @@
 		                    <div class="panel panel-yellow">
 		                        <div class="panel-heading">
 		                            <div class="row">
-		                                <div class="col-xs-12 text-center">
+
+		                                <div class="col-xs-12 text-center" ng-if="cabanas[1].cabanaConreserva == 'conReserva'"> 
+	                                    	<h4>PRECIO NO DISPONIBLE</h4>
+		                                </div>
+
+		                                <div class="col-xs-12 text-center" ng-if="cabanas[1].cabanaConreserva == 'disponibles'"> 
 	                                    	<h4>DESDE</h4>
 	                                    	<div class="huge">${{cabanas[1].precio}}</div>
 	                                    	<h4>P/Día</h4>
 		                                </div>
+
 		                            </div>
 		                        </div>
 
@@ -394,7 +406,11 @@
 		                    <div class="panel panel-yellow">
 		                        <div class="panel-heading">
 		                            <div class="row">
-		                                <div class="col-xs-12 text-center">
+		                                <div class="col-xs-12 text-center" ng-if="cabanas[2].cabanaConreserva == 'conReserva'"> 
+	                                    	<h4>PRECIO NO DISPONIBLE</h4>
+		                                </div>
+
+		                                <div class="col-xs-12 text-center" ng-if="cabanas[2].cabanaConreserva == 'disponibles'"> 
 	                                    	<h4>DESDE</h4>
 	                                    	<div class="huge">${{cabanas[2].precio}}</div>
 	                                    	<h4>P/Día</h4>
@@ -516,7 +532,11 @@
 		                    <div class="panel panel-yellow">
 		                        <div class="panel-heading">
 		                            <div class="row">
-		                                <div class="col-xs-12 text-center">
+		                                <div class="col-xs-12 text-center" ng-if="cabanas[3].cabanaConreserva == 'conReserva'"> 
+	                                    	<h4>PRECIO NO DISPONIBLE</h4>
+		                                </div>
+
+		                                <div class="col-xs-12 text-center" ng-if="cabanas[3].cabanaConreserva == 'disponibles'"> 
 	                                    	<h4>DESDE</h4>
 	                                    	<div class="huge">${{cabanas[3].precio}}</div>
 	                                    	<h4>P/Día</h4>
@@ -636,7 +656,11 @@
 		                    <div class="panel panel-yellow">
 		                        <div class="panel-heading">
 		                            <div class="row">
-		                                <div class="col-xs-12 text-center">
+		                                <div class="col-xs-12 text-center" ng-if="cabanas[4].cabanaConreserva == 'conReserva'"> 
+	                                    	<h4>PRECIO NO DISPONIBLE</h4>
+		                                </div>
+
+		                                <div class="col-xs-12 text-center" ng-if="cabanas[4].cabanaConreserva == 'disponibles'"> 
 	                                    	<h4>DESDE</h4>
 	                                    	<div class="huge">${{cabanas[4].precio}}</div>
 	                                    	<h4>P/Día</h4>
